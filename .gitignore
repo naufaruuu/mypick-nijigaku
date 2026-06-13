@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules
+dist
+.next
+out
+
+# os / editor cruft
+*.local
+.DS_Store
+
+# secrets — never commit (templates `*.example` are kept)
+.env
+.env.*
+!.env.example
+
+# Helm: real cluster values carry host/credentials — keep only the template
+chart/values.yaml

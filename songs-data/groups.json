@@ -1,0 +1,96 @@
+{
+    "groups": [
+        {
+            "en_name": "Nijigasaki High School Idol Club",
+            "jp_name": "虹ヶ咲学園スクールアイドル同好会",
+            "slug": "Nijigaku",
+            "members": [
+                [
+                    "Ayumu-Uehara",
+                    "Kasumi-Nakasu",
+                    "Shizuku-Osaka",
+                    "Karin-Asaka",
+                    "Ai-Miyashita",
+                    "Kanata-Konoe",
+                    "Setsuna-Yuki",
+                    "Emma-Verde",
+                    "Rina-Tennoji",
+                    "Shioriko-Mifune",
+                    "Lanzhu-Zhong",
+                    "Mia-Taylor"
+                ],
+                [
+                    "Ayumu-Uehara",
+                    "Kasumi-Nakasu",
+                    "Shizuku-Osaka",
+                    "Karin-Asaka",
+                    "Ai-Miyashita",
+                    "Kanata-Konoe",
+                    "Setsuna-Yuki",
+                    "Emma-Verde",
+                    "Rina-Tennoji",
+                    "Shioriko-Mifune"
+                ],
+                [
+                    "Ayumu-Uehara",
+                    "Kasumi-Nakasu",
+                    "Shizuku-Osaka",
+                    "Karin-Asaka",
+                    "Ai-Miyashita",
+                    "Kanata-Konoe",
+                    "Setsuna-Yuki",
+                    "Emma-Verde",
+                    "Rina-Tennoji"
+                ]
+            ]
+        },
+        {
+            "en_name": "A・ZU・NA",
+            "jp_name": null,
+            "slug": "AZUNA",
+            "members": [ 
+                [
+                    "Ayumu-Uehara",
+                    "Shizuku-Osaka",
+                    "Setsuna-Yuki"
+                ]
+            ]
+        },
+        {
+            "en_name": "QU4RTZ",
+            "jp_name": null,
+            "slug": "QU4RTZ",
+            "members": [ 
+                [
+                    "Kasumi-Nakasu",
+                    "Kanata-Konoe",
+                    "Emma-Verde",
+                    "Rina-Tennoji"
+                ]
+            ]
+        },
+        {
+            "en_name": "DiverDiva",
+            "jp_name": null,
+            "slug": "DiverDiva",
+            "members": [ 
+                [
+                    "Karin-Asaka",
+                    "Ai-Miyashita"
+                ]
+            ]
+        },
+        {
+            "en_name": "R3BIRTH",
+            "jp_name": null,
+            "slug": "R3BIRTH",
+            "members": [
+                [
+                    "Shioriko-Mifune",
+                    "Lanzhu-Zhong",
+                    "Mia-Taylor"
+                ]
+            ]
+        }
+    ]
+}

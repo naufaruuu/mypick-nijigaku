@@ -1,0 +1,59 @@
+{{- $cfg := .Values.redis -}}
+{{- $svc := $cfg.service -}}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mypick-nijigasaki.fullname" . }}-redis
+  labels:
+    {{- include "mypick-nijigasaki.componentLabels" (merge (dict "component" "redis") .) | nindent 4 }}
+spec:
+  replicas: {{ $cfg.replicas }}
+  selector:
+    matchLabels:
+      {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "redis") .) | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "redis") .) | nindent 8 }}
+    spec:
+      {{- include "mypick-nijigasaki.imagePullSecrets" . | nindent 6 }}
+      nodeSelector:
+        {{- include "mypick-nijigasaki.nodeSelector" (merge (dict "componentNodeSelector" $cfg.nodeSelector) .) | nindent 8 }}
+      containers:
+        - name: redis
+          image: {{ include "mypick-nijigasaki.image" (dict "root" $ "key" "redis") }}
+          imagePullPolicy: {{ include "mypick-nijigasaki.imagePullPolicy" (dict "root" $ "key" "redis") }}
+          # Pure cache: no persistence, bounded memory, evict LRU.
+          args:
+            - redis-server
+            - --save
+            - ""
+            - --appendonly
+            - "no"
+            - --maxmemory
+            - {{ $cfg.maxmemory | quote }}
+            - --maxmemory-policy
+            - {{ $cfg.maxmemoryPolicy | quote }}
+          ports:
+            - name: redis
+              containerPort: 6379
+          resources:
+            {{- toYaml $cfg.resources | nindent 12 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "mypick-nijigasaki.fullname" . }}-redis
+  {{- include "mypick-nijigasaki.serviceMeta" (dict "root" $ "component" "redis" "svc" $svc) | nindent 2 }}
+spec:
+  type: {{ default "ClusterIP" $svc.type }}
+  {{- include "mypick-nijigasaki.serviceSpecExtras" (dict "svc" $svc) | nindent 2 }}
+  selector:
+    {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "redis") .) | nindent 4 }}
+  ports:
+    - name: redis
+      port: 6379
+      targetPort: redis
+      {{- with $svc.nodePort }}
+      nodePort: {{ . }}
+      {{- end }}

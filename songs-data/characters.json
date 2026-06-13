@@ -1,0 +1,108 @@
+{
+    "characters": [
+        {
+            "id": 1,
+            "slug": "Ayumu-Uehara",
+            "en_name": "Ayumu Uehara",
+            "jp_name": "上原歩夢",
+            "color": "#ed7d95",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/ayumu.png"
+        },
+        {
+            "id": 2,
+            "slug": "Kasumi-Nakasu",
+            "en_name": "Kasumi Nakasu",
+            "jp_name": "中須かすみ",
+            "color": "#e7d600",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/kasumi.png"
+        },
+        {
+            "id": 3,
+            "slug": "Shizuku-Osaka",
+            "en_name": "Shizuku Osaka",
+            "jp_name": "桜坂しずく",
+            "color": "#01b7ed",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/shizuku.png"
+        },
+        {
+            "id": 4,
+            "slug": "Karin-Asaka",
+            "en_name": "Karin Asaka",
+            "jp_name": "朝香果林",
+            "color": "#485ec6",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/karin.png"
+        },
+        {
+            "id": 5,
+            "slug": "Ai-Miyashita",
+            "en_name": "Ai Miyashita",
+            "jp_name": "宮下愛",
+            "color": "#ff5800",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/ai.png"
+        },
+        {
+            "id": 6,
+            "slug": "Kanata-Konoe",
+            "en_name": "Kanata Konoe",
+            "jp_name": "近江彼方",
+            "color": "#a664a0",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/kanata.png"
+        },
+        {
+            "id": 7,
+            "slug": "Setsuna-Yuki",
+            "en_name": "Setsuna Yuki",
+            "jp_name": "優木せつ菜",
+            "color": "#d81c2f",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/setsuna.png"
+        },
+        {
+            "id": 8,
+            "slug": "Emma-Verde",
+            "en_name": "Emma Verde",
+            "jp_name": "エマ・ヴェルデ",
+            "color": "#84c36e",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/verde.png"
+        },
+        {
+            "id": 9,
+            "slug": "Rina-Tennoji",
+            "en_name": "Rina Tennoji",
+            "jp_name": "天王寺璃奈",
+            "color": "#9ca5b9",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/rina.png"
+        },
+        {
+            "id": 10,
+            "slug": "Shioriko-Mifune",
+            "en_name": "Shioriko Mifune",
+            "jp_name": "三船栞子",
+            "color": "#37b484",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/shioriko.png"
+        },
+        {
+            "id": 11,
+            "slug": "Lanzhu-Zhong",
+            "en_name": "Lanzhu Zhong",
+            "jp_name": "ショウ・ランジュ",
+            "color": "#f8c8c4",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/lanzhu.png"
+        },
+        {
+            "id": 12,
+            "slug": "Mia-Taylor",
+            "en_name": "Mia Taylor",
+            "jp_name": "ミア・テイラー",
+            "color": "#a9a898",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/mia.png"
+        },
+        {
+            "id": 13,
+            "slug": "Yu-Takasaki",
+            "en_name": "Yu Takasaki",
+            "jp_name": "高咲侑",
+            "color": "#1d1d1d",
+            "image": "https://ll-mbti-assets.naufalalfa.com/nijigasaki/yu.png"
+        }
+    ]
+}

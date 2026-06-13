@@ -1,0 +1,106 @@
+# Copy to `values.yaml` and fill in for your cluster. The real values.yaml is
+# gitignored (it carries your LAN host / credentials); this template is what's
+# committed. Override secrets via `--set` or a private values overlay too.
+
+# ---- Global ----
+global:
+  env: {}
+  imagePullSecrets:
+    - name: ghcr-secret
+  nodeSelector: {}
+  imagePullPolicy: IfNotPresent
+  # All container images live here. Bump tags in one place; component blocks
+  # below reference them by key.
+  images:
+    web:
+      repository: ghcr.io/naufaruuu/mypick-nijigasaki-web
+      tag: latest
+    nginx:
+      repository: nginx
+      tag: alpine
+    redis:
+      repository: redis
+      tag: 7-alpine
+
+# ---- Ingress ----
+ingress:
+  enabled: true
+  className: traefik
+  annotations: {}
+  tls: []     # [{secretName: mypick-nijigaku-tls, hosts: [mypick-nijigaku.naufalalfa.com]}]
+  hosts:
+    web: mypick-nijigaku.naufalalfa.com   # routes to web service; also drives SITE_URL
+
+# ---- Components ----
+# Image refs live in global.images above. Each block here is pure runtime
+# config: replicas, scheduling, resources.
+
+web:
+  replicas: 3
+  nodeSelector: {}
+  # Port the Next.js standalone server binds (container port). Drives the
+  # PORT env, the nginx sidecar upstream, and the Service when the sidecar
+  # is disabled.
+  port: 3000
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
+  service:
+    type: ClusterIP        # ClusterIP | NodePort | LoadBalancer
+    annotations: {}
+    labels: {}
+    # nodePort: 30088      # only when type=NodePort
+    # loadBalancerIP: ""   # only when type=LoadBalancer
+  sidecars:
+    nginx:
+      enabled: true
+      config: config/nginx-web.conf
+      # Port the nginx sidecar listens on; becomes the Service port and the
+      # ingress backend port when the sidecar is enabled.
+      port: 3001
+      resources:
+        requests:
+          cpu: 50m
+          memory: 64Mi
+        limits:
+          cpu: 500m
+          memory: 256Mi
+  # Becomes the web env Secret. REDIS_URL, PORT and SITE_URL are injected by the
+  # web template (REDIS_URL from the release name; PORT from web.port; SITE_URL
+  # from ingress.hosts.web) so they always stay in sync — keep them out of here.
+  config:
+    # web runtime (Next.js standalone server)
+    NODE_ENV: production
+    HOSTNAME: 0.0.0.0
+
+    # PostgreSQL — lives on the LAN, reachable from the cluster.
+    POSTGRES_HOST: 10.0.0.10        # <-- your LAN Postgres host
+    POSTGRES_PORT: "5432"
+    POSTGRES_DB: mypick-nijigasaku
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: changeme     # <-- set a real password (or via --set)
+
+    CDN_ENDPOINT: niji-mypick-cdn.naufalalfa.com
+
+# Pure cache: no persistence, bounded memory, evict least-recently-used.
+# Mirrors the compose redis-server flags.
+redis:
+  replicas: 1
+  nodeSelector: {}
+  maxmemory: 128mb
+  maxmemoryPolicy: allkeys-lru
+  resources:
+    requests:
+      cpu: 50m
+      memory: 64Mi
+    limits:
+      cpu: 500m
+      memory: 192Mi
+  service:
+    type: ClusterIP
+    annotations: {}
+    labels: {}

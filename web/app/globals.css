@@ -1,0 +1,509 @@
+@import 'tailwindcss';
+
+:root {
+  /* squircle radius for buttons/inputs — matches the card corners */
+  --border-radius-lg: 10px;
+  /* destructive (Clear all) — soft red that reads on the cream card */
+  --color-background-danger: #fdecea;
+  --color-text-danger: #c0392b;
+  --color-border-danger: #f0c4c0;
+}
+
+html,
+body {
+  margin: 0;
+  background: #faf7ef;
+  /* Poppins (embedded via next/font) for Latin; system JP fonts as fallback. */
+  font-family:
+    var(--font-poppins), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Noto Sans JP',
+    Meiryo, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-main {
+  flex: 1;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  box-sizing: border-box;
+}
+
+/* ---- global footer ---- */
+.site-footer {
+  margin-top: 12px;
+  width: 100%;
+}
+.footer-rainbow {
+  height: 10px;
+  border-radius: 0; /* full-bleed bottom border */
+  margin: 0;
+}
+.footer-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px 32px;
+  text-align: center;
+}
+.footer-credit {
+  font-size: 12px;
+  color: #5f5e5a;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+.footer-credit a {
+  color: #6b5a00;
+  text-decoration: none;
+}
+.footer-credit a:hover {
+  text-decoration: underline;
+}
+.footer-note {
+  font-size: 11px;
+  color: #a8a69e;
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 16px 0 12px;
+  flex-wrap: wrap;
+}
+.footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  color: #26215c;
+}
+.footer-btn-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: none;
+}
+.footer-url {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #26215c;
+  font-weight: 600;
+}
+
+/* controls bar (outside the sheet so it's not captured in the export).
+   8px horizontal padding so its left/right edges line up with the card grid,
+   which the sheet insets by its own 8px padding. */
+.controls {
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 12px;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* global header: title + 12-color rainbow border */
+.app-header {
+  width: 100%;
+  margin: 18px 0 6px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.app-header-inner {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+.app-header-link {
+  text-decoration: none;
+  display: block;
+}
+
+/* language switch — single segmented two-state toggle, top-right of the header */
+.lang-toggle-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 6px;
+}
+.lang-toggle {
+  display: inline-flex;
+  border: 1px solid #d6d3c9;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  background: #ffffff;
+  font-size: 11px;
+}
+.lang-toggle button {
+  border: none;
+  background: transparent;
+  color: #888780;
+  font-size: 11px;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+.lang-toggle button + button {
+  border-left: 1px solid #d6d3c9;
+}
+/* neutral active fill (gray) — must NOT compete with the yellow Download button */
+.lang-toggle button.active {
+  background: #6b6a64;
+  color: #ffffff;
+  font-weight: 600;
+}
+.rainbow-border {
+  display: flex;
+  height: 10px;
+  margin-top: 12px;
+  border-radius: 0; /* square, full-bleed (header is full width) */
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.name-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.name-help {
+  font-size: 12px;
+  color: #888780;
+  padding-left: 6px;
+  line-height: 1.45;
+}
+/* privacy reassurance — a touch darker than the rest of the helper line */
+.name-privacy {
+  color: #5f5e5a;
+  font-weight: 500;
+}
+
+.action-row {
+  display: flex;
+  gap: 8px;
+}
+
+.controls-divider {
+  height: 1px;
+  background: #e3e0d6;
+  margin: 2px 0;
+}
+
+.controls-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pick-count {
+  font-size: 12px;
+  color: #888780;
+  letter-spacing: 0.3px;
+  background: #ffffff;
+  border: 1px solid #e3e0d6;
+  padding: 5px 12px;
+  border-radius: var(--border-radius-lg);
+}
+
+/* destructive action: red danger styling, but kept small + demoted in the foot
+   row so it never reads as a peer of the main buttons */
+.btn-clear {
+  background: var(--color-background-danger);
+  border: 1px solid var(--color-border-danger);
+  color: var(--color-text-danger);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 5px 12px;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition: filter 0.15s ease;
+}
+.btn-clear:hover {
+  filter: brightness(0.97);
+}
+
+.btn {
+  border: 1px solid #d6d3c9;
+  background: #ffffff;
+  color: #5f5e5a;
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    filter 0.15s ease;
+}
+.btn:hover {
+  background: #f4f2ec;
+}
+.btn-primary {
+  background: #d85a30;
+  border-color: #d85a30;
+  color: #ffffff;
+  font-weight: 600;
+}
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+/* footer external-link buttons (placed after .btn so the brand colors win) */
+.footer-btn-github {
+  background: #1b1f24;
+  border-color: #1b1f24;
+  color: #ffffff;
+}
+.footer-btn-github:hover {
+  background: #000000;
+  filter: none;
+}
+.footer-btn-mbti {
+  background: #ea3a9d;
+  border-color: #ea3a9d;
+  color: #ffffff;
+}
+.footer-btn-mbti:hover {
+  background: #ea3a9d;
+  filter: brightness(0.95);
+}
+
+/* primary export action — corrected Nijigasaki golden accent, dark text, wide */
+.btn-download {
+  flex: 2;
+  background: #f8d657;
+  border-color: #f3cd3c;
+  color: #6b5a00;
+  font-weight: 700;
+  padding: 9px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+.btn-download:hover {
+  filter: brightness(0.97);
+}
+
+/* secondary tier — Share, Picks, All songs are ALL styled identically here
+   (outline .btn, default text color). Appearance encodes role, not category:
+   only the filled Download and the red Clear all break from this style. */
+.btn-secondary {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* navigation buttons row (Picks · All songs) */
+.nav-row {
+  display: flex;
+  gap: 8px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.name-input {
+  border: 1px solid #d6d3c9;
+  background: #ffffff;
+  color: #5f5e5a;
+  font-size: 13px;
+  padding: 7px 12px;
+  border-radius: var(--border-radius-lg);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+.name-input:focus {
+  border-color: #8a8880;
+}
+
+/* ---- sheet: the single content layer (also the export target) ---- */
+.sheet {
+  width: 100%;
+  max-width: 760px;
+  background: #faf7ef;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.sheet.transparent-bg {
+  background: transparent;
+}
+.sheet.hide-titles .slot-overlay {
+  display: none;
+}
+
+.slot {
+  aspect-ratio: 1 / 1;
+  border: 1.5px dashed #b4b2a9;
+  /* squared off: fills the card body flush so the accent card bg can't show as
+     corner notches (the card's own rounding clips the visible bottom corners) */
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #888780;
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease;
+}
+.slot:hover {
+  border-color: #8a8880;
+  background: #fbfaf6;
+}
+.slot.readonly {
+  cursor: default;
+}
+
+/* brief flash when a pick just changed (close-the-loop feedback) */
+@keyframes slotFlash {
+  0% {
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+  25% {
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.95);
+  }
+  100% {
+    box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+.slot--flash {
+  animation: slotFlash 0.7s ease-out;
+}
+
+/* a slot holding a picked song — cover fills edge-to-edge, no border */
+.slot--filled {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 0;
+  background: #000;
+  padding: 0;
+}
+.slot-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slot-overlay {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  padding: 14px 6px 5px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.55) 55%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  text-align: center;
+}
+.slot-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slot-jp {
+  font-size: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slot-clear {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #444;
+  font-size: 13px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.slot--filled:hover .slot-clear {
+  opacity: 1;
+}
+.slot-clear:hover {
+  background: #e24b4a;
+  color: #fff;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  /* Force a dedicated raster layer so the rounded-corner clip is anti-aliased
+     once, against transparency — not re-blended with the white bg on a separate
+     pass. Without this, Android's fractional DPR leaks a faint white hairline at
+     the rounded corners of a filled (cover-image) card. */
+  transform: translateZ(0);
+}
+.chead {
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 4px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cbody {
+  padding: 0;
+}
+
+.poster-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  color: #26215c;
+}
+.poster-subtitle {
+  font-size: 12px;
+  color: #888780;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+.poster-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #26215c;
+  font-weight: 500;
+}

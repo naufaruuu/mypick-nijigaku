@@ -1,0 +1,6 @@
+apiVersion: v2
+name: mypick-nijigasaki
+description: My Pick Nijigasaki — Next.js web fronted by an nginx sidecar, with a Redis cache. Postgres lives on the LAN.
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

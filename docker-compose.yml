@@ -1,0 +1,46 @@
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    image: mypick-nijigasaki-web
+    restart: unless-stopped
+    # Single source of app config (Postgres, CDN, SITE_URL) — the same file the
+    # app uses for local `bun run dev`. Gitignored; copy web/.env.example first.
+    env_file:
+      - ./web/.env
+    environment:
+      # Runtime knobs the deployment owns (not app secrets), kept out of .env so
+      # the example stays dev-friendly. The standalone server binds HOSTNAME:PORT.
+      - NODE_ENV=production
+      - HOSTNAME=0.0.0.0
+      - PORT=3000
+      # cache lives in the compose network; not in .env so local `bun run dev`
+      # (no redis container) just runs cache-less against the DB.
+      - REDIS_URL=redis://redis:6379
+    expose:
+      - "3000"
+    # Postgres lives on the LAN (POSTGRES_HOST in .env), reachable from the
+    # container. If you ever run it on the docker host instead, point
+    # POSTGRES_HOST at host.docker.internal (mapping below) instead.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    # pure cache: no persistence, bounded memory, evict least-recently-used.
+    command: ["redis-server", "--save", "", "--appendonly", "no", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+
+  nginx:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "8088:80"
+    volumes:
+      - ./nginx/log_format.conf:/etc/nginx/conf.d/00-log-format.conf:ro
+      - ./nginx/web.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - web

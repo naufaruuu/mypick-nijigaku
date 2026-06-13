@@ -1,0 +1,2418 @@
+{
+    "songs-details": [
+        {
+            "id": 207,
+            "name": "TOKIMEKI Runners",
+            "jp_name": null,
+            "slug": "TOKIMEKI-Runners",
+            "image": "https://i.idol.st/u/song/207TOKIMEKI-Runners-0I05vY.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 208,
+            "name": "Yume e no Ippo",
+            "jp_name": "夢への一歩",
+            "slug": "Yume-e-no-Ippo",
+            "image": "https://i.idol.st/u/song/208夢への一歩-fCbZ5A.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 209,
+            "name": "Diamond",
+            "jp_name": "ダイアモンド",
+            "slug": "Diamond",
+            "image": "https://i.idol.st/u/song/209ダイアモンド-FyGKoK.jpg",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 210,
+            "name": "Anata no Risou no Heroine",
+            "jp_name": "あなたの理想のヒロイン",
+            "slug": "Anata-no-Risou-no-Heroine",
+            "image": "https://i.idol.st/u/song/210あなたの理想のヒロイン-PPlLsO.jpg",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 211,
+            "name": "Starlight",
+            "jp_name": null,
+            "slug": "Starlight",
+            "image": "https://i.idol.st/u/song/211Starlight-iscMf0.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 212,
+            "name": "Meccha Going!!",
+            "jp_name": "めっちゃGoing!!",
+            "slug": "Meccha-Going",
+            "image": "https://i.idol.st/u/song/212めっちゃGoing-JJCBeK.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 213,
+            "name": "Nemureru Mori ni Ikitai na",
+            "jp_name": "眠れる森に行きたいな",
+            "slug": "Nemureru-Mori-ni-Ikitai-na",
+            "image": "https://i.idol.st/u/song/213眠れる森に行きたいな-NnqDL7.jpg",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 214,
+            "name": "CHASE!",
+            "jp_name": null,
+            "slug": "CHASE",
+            "image": "https://i.idol.st/u/song/214CHASE-fu0IDd.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 215,
+            "name": "Evergreen",
+            "jp_name": null,
+            "slug": "Evergreen",
+            "image": "https://i.idol.st/u/song/215Evergeen-nmzJB4.jpg",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 216,
+            "name": "Dokipipo☆Emotion",
+            "jp_name": "ドキピポ☆エモーション",
+            "slug": "Dokipipo-Emotion",
+            "image": "https://i.idol.st/u/song/216ドキピポ-エモーション-hrBHoW.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 218,
+            "name": "Kaika Sengen",
+            "jp_name": "開花宣言",
+            "slug": "Kaika-Sengen",
+            "image": "https://i.idol.st/u/song/218Blossoming-Declaration-Gg20Uz.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 219,
+            "name": "☆Wonderland☆",
+            "jp_name": "☆ワンダーランド☆",
+            "slug": "Wonderland",
+            "image": "https://i.idol.st/u/song/219Wonderland-M5nS5A.jpg",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 220,
+            "name": "Audrey",
+            "jp_name": "オードリー",
+            "slug": "Audrey",
+            "image": "https://i.idol.st/u/song/220Audrey-LG8OPq.jpg",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 221,
+            "name": "Wish",
+            "jp_name": null,
+            "slug": "Wish",
+            "image": "https://i.idol.st/u/song/221Wish-04fNEF.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 222,
+            "name": "Yuu & Ai",
+            "jp_name": "友 & 愛",
+            "slug": "Yuu-Ai",
+            "image": "https://i.idol.st/u/song/222You-I-tyCKIT.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 223,
+            "name": "My Own Fairy-Tale",
+            "jp_name": null,
+            "slug": "My-Own-Fairy-Tale",
+            "image": "https://i.idol.st/u/song/223My-Own-Fairy-Tale-FgdZkL.jpg",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 224,
+            "name": "MELODY",
+            "jp_name": null,
+            "slug": "MELODY",
+            "image": "https://i.idol.st/u/song/224MELODY-DGGD3Y.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 225,
+            "name": "Koe Tsunagou yo",
+            "jp_name": "声繋ごうよ",
+            "slug": "Koe-Tsunagou-yo",
+            "image": "https://i.idol.st/u/song/225Let-s-Connect-Our-Voices-7ZD6op.jpg",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 226,
+            "name": "Teletelepathy",
+            "jp_name": "テレテレパシー",
+            "slug": "Teletelepathy",
+            "image": "https://i.idol.st/u/song/226Teletelepathy-3ttvLl.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 227,
+            "name": "Love U my friends",
+            "jp_name": null,
+            "slug": "Love-U-my-friends",
+            "image": "https://i.idol.st/u/song/227Love-U-my-friends-yCImwz.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 242,
+            "name": "SUPER NOVA",
+            "jp_name": null,
+            "slug": "SUPER-NOVA",
+            "image": "https://i.idol.st/u/song/242SUPER-NOVA-gw61fX.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 243,
+            "name": "Love Triangle",
+            "jp_name": null,
+            "slug": "Love-Triangle",
+            "image": "https://i.idol.st/u/song/243Love-Triangle-bt8gWS.jpeg",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 244,
+            "name": "Sing & Smile!!",
+            "jp_name": null,
+            "slug": "Sing-Smile",
+            "image": "https://i.idol.st/u/song/244Sing-Smile-vx4V0e.jpg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 245,
+            "name": "Beautiful Moonlight",
+            "jp_name": null,
+            "slug": "Beautiful-Moonlight",
+            "image": "https://i.idol.st/u/song/245Beautiful-Moonlight-Ff9BL6.jpeg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 246,
+            "name": "Dream Land! Dream World!",
+            "jp_name": null,
+            "slug": "Dream-Land-Dream-World",
+            "image": "https://i.idol.st/u/song/246Dream-Land-Dream-World-I8OdIh.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 247,
+            "name": "Cheer for you!!",
+            "jp_name": null,
+            "slug": "Cheer-for-you",
+            "image": "https://i.idol.st/u/song/247Cheer-for-you-UgrwWx.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 251,
+            "name": "Margaret",
+            "jp_name": null,
+            "slug": "Margaret",
+            "image": "https://i.idol.st/u/song/251Margaret-U5srpe.jpg",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 252,
+            "name": "Mutekikyuu*Believer",
+            "jp_name": "無敵級*ビリーバー",
+            "slug": "Mutekikyuu-Believer",
+            "image": "https://i.idol.st/u/song/252Mutekikyuu-Believer-nyBEwA.png",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 253,
+            "name": "Mirai Harmony",
+            "jp_name": "未来ハーモニー",
+            "slug": "Mirai-Harmony",
+            "image": "https://i.idol.st/u/song/253Mirai-Harmony-cfjISr.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 254,
+            "name": "Say Good-Bye Namida",
+            "jp_name": "Say Good-Bye 涙",
+            "slug": "Say-Good-Bye-Namida",
+            "image": "https://i.idol.st/u/song/254Say-Good-Bye-Namida-nQXyhB.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 260,
+            "name": "Yagate Hitotsu no Monogatari",
+            "jp_name": "やがてひとつの物語",
+            "slug": "Yagate-Hitotsu-no-Monogatari",
+            "image": "https://i.idol.st/u/song/260Yagate-Hitotsu-no-Monogatari-8l0T4C.jpg",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 261,
+            "name": "Aion no Uta",
+            "jp_name": "哀温ノ詩",
+            "slug": "Aion-no-Uta",
+            "image": "https://i.idol.st/u/song/261Aion-no-Uta-x5PCWV.png",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 262,
+            "name": "Märchen Star",
+            "jp_name": null,
+            "slug": "Märchen-Star",
+            "image": "https://i.idol.st/u/song/262Märchen-Star-bKwcMZ.jpg",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 264,
+            "name": "Fire Bird",
+            "jp_name": null,
+            "slug": "Fire-Bird",
+            "image": "https://i.idol.st/u/song/264Fire-Bird-jVN2Ep.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 265,
+            "name": "Analog Heart",
+            "jp_name": "アナログハート",
+            "slug": "Analog-Heart",
+            "image": "https://i.idol.st/u/song/265Analog-Heart-6K7S9L.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 266,
+            "name": "Tanoshii no Tensai",
+            "jp_name": "楽しいの天才",
+            "slug": "Tanoshii-no-Tensai",
+            "image": "https://i.idol.st/u/song/266Tanoshii-no-Tensai-IgeAuk.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 267,
+            "name": "LIKE IT! LOVE IT!",
+            "jp_name": null,
+            "slug": "LIKE-IT-LOVE-IT",
+            "image": "https://i.idol.st/u/song/267LIKE-IT-LOVE-IT-aCCI9V.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 268,
+            "name": "Ketsui no Hikari",
+            "jp_name": "決意の光",
+            "slug": "Ketsui-no-Hikari",
+            "image": "https://i.idol.st/u/song/268Ketsui-no-Hikari-dadcuo.png",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 269,
+            "name": "Just Believe!!!",
+            "jp_name": null,
+            "slug": "Just-Believe",
+            "image": "https://i.idol.st/u/song/269Just-Believe-wsld08.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 270,
+            "name": "TOKIMEKI Runners Chapter 17 Ver.",
+            "jp_name": "TOKIMEKI Runners 17章Ver.",
+            "slug": "TOKIMEKI-Runners-Chapter-17-Ver",
+            "image": "https://i.idol.st/u/song/270TOKIMEKI-Runners-Chapter-17-Insert-Ver-f0hDcz.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 275,
+            "name": "NEO SKY, NEO MAP!",
+            "jp_name": null,
+            "slug": "NEO-SKY-NEO-MAP",
+            "image": "https://i.idol.st/u/song/275NEO-SKY-NEO-MAP-ky0PWI.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 276,
+            "name": "Zensoku Dreamer",
+            "jp_name": "全速ドリーマー",
+            "slug": "Zensoku-Dreamer",
+            "image": "https://i.idol.st/u/song/276Zensoku-Dreamer-e9EIew.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 277,
+            "name": "Nijiiro Passions!",
+            "jp_name": "虹色Passions!",
+            "slug": "Nijiiro-Passions",
+            "image": "https://i.idol.st/u/song/277Nijiiro-Passions-NVMhiA.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 278,
+            "name": "Sweet Eyes",
+            "jp_name": null,
+            "slug": "Sweet-Eyes",
+            "image": "https://i.idol.st/u/song/278Sweet-Eyes-phF2jz.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 279,
+            "name": "Dream with You",
+            "jp_name": null,
+            "slug": "Dream-with-You",
+            "image": "https://i.idol.st/u/song/279Dream-with-You-fMtWMX.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 280,
+            "name": "Poppin' Up!",
+            "jp_name": null,
+            "slug": "Poppin-Up",
+            "image": "https://i.idol.st/u/song/280Poppin-Up-kWjYio.jpg",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 281,
+            "name": "DIVE!",
+            "jp_name": null,
+            "slug": "DIVE",
+            "image": "https://i.idol.st/u/song/281DIVE-zZwp5u.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 282,
+            "name": "Saikou Heart",
+            "jp_name": "サイコーハート",
+            "slug": "Saikou-Heart",
+            "image": "https://i.idol.st/u/song/282Saikou-Heart-imALlW.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 283,
+            "name": "La Bella Patria",
+            "jp_name": "The beautiful homeland",
+            "slug": "La-Bella-Patria",
+            "image": "https://i.idol.st/u/song/283La-Bella-Patria-4xV1Qi.jpg",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 284,
+            "name": "Tsunagaru Connect",
+            "jp_name": "ツナガルコネクト",
+            "slug": "Tsunagaru-Connect",
+            "image": "https://i.idol.st/u/song/284Tsunagaru-Connect-Gtp3KE.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 289,
+            "name": "Butterfly",
+            "jp_name": null,
+            "slug": "Butterfly",
+            "image": "https://i.idol.st/u/song/289Butterfly-h1Jr6N.jpg",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 290,
+            "name": "Solitude Rain",
+            "jp_name": null,
+            "slug": "Solitude-Rain",
+            "image": "https://i.idol.st/u/song/290Solitude-Rain-NYT2wZ.jpg",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 291,
+            "name": "VIVID WORLD",
+            "jp_name": null,
+            "slug": "VIVID-WORLD",
+            "image": "https://i.idol.st/u/song/291VIVID-WORLD-wnwM3a.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 292,
+            "name": "POWER SPOT!!",
+            "jp_name": null,
+            "slug": "POWER-SPOT",
+            "image": "https://i.idol.st/u/song/292POWER-SPOT-L0hxq4.jpeg",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 295,
+            "name": "Awakening Promise",
+            "jp_name": null,
+            "slug": "Awakening-Promise",
+            "image": "https://i.idol.st/u/song/295Awakening-Promise-wgULYn.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 296,
+            "name": "Kakushiaji!",
+            "jp_name": "Secret Ingredient!",
+            "slug": "Kakushiaji",
+            "image": "https://i.idol.st/u/song/296Kakushiaji-KBwfYJ.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 297,
+            "name": "Yume ga Koko Kara Hajimaru yo",
+            "jp_name": "夢がここからはじまるよ",
+            "slug": "Yume-ga-Koko-Kara-Hajimaru-yo",
+            "image": "https://i.idol.st/u/song/297Yume-ga-Koko-Kara-Hajimaru-yo-D71jTu.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 300,
+            "name": "Make-up session ABC",
+            "jp_name": null,
+            "slug": "Make-up-session-ABC",
+            "image": "https://i.idol.st/u/song/300Make-up-session-ABC-TvwiFE.jpeg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 301,
+            "name": "Saika -saika-",
+            "jp_name": "祭花 -saika-",
+            "slug": "Saika-saika",
+            "image": "https://i.idol.st/u/song/301Saika-saika-R8nBQR.jpeg",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 303,
+            "name": "Queendom",
+            "jp_name": null,
+            "slug": "Queendom",
+            "image": "https://i.idol.st/u/song/303Queendom-BZKPqM.jpeg",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 304,
+            "name": "I'm Still...",
+            "jp_name": null,
+            "slug": "I-m-Still",
+            "image": "https://i.idol.st/u/song/304I-m-Still-nSGmVE.jpeg",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 305,
+            "name": "Happy Nyan! Days",
+            "jp_name": null,
+            "slug": "Happy-Nyan-Days",
+            "image": "https://i.idol.st/u/song/305Happy-Nyan-Days-AJ6rFL.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 311,
+            "name": "THE SECRET NiGHT",
+            "jp_name": null,
+            "slug": "THE-SECRET-NiGHT",
+            "image": "https://i.idol.st/u/song/311THE-SECRET-NiGHT-J8mlwz.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 312,
+            "name": "Fly into the sky",
+            "jp_name": null,
+            "slug": "Fly-into-the-sky",
+            "image": "https://i.idol.st/u/song/312Fly-into-the-sky-d9ERqN.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 313,
+            "name": "Twinkle Town",
+            "jp_name": null,
+            "slug": "Twinkle-Town",
+            "image": "https://i.idol.st/u/song/313Twinkle-Town-t6Mfx1.jpeg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 315,
+            "name": "Hurray Hurray",
+            "jp_name": null,
+            "slug": "Hurray-Hurray",
+            "image": "https://i.idol.st/u/song/315Hurray-Hurray-ZFL2DI.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 320,
+            "name": "Maze Town",
+            "jp_name": null,
+            "slug": "Maze-Town",
+            "image": "https://i.idol.st/u/song/320Maze-Town-Moonjd.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 321,
+            "name": "Folklore ~Kanki no Uta~",
+            "jp_name": "フォルクロア ～歓喜の歌～",
+            "slug": "Folklore-Kanki-no-Uta",
+            "image": "https://i.idol.st/u/song/321Folklore-Kanki-no-Uta-nRvzYG.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 322,
+            "name": "Aoi Canaria",
+            "jp_name": "翠いカナリア",
+            "slug": "Aoi-Canaria",
+            "image": "https://i.idol.st/u/song/322Aoi-Canaria-mfrTV6.jpg",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 323,
+            "name": "Swinging!",
+            "jp_name": null,
+            "slug": "Swinging",
+            "image": "https://i.idol.st/u/song/323Swinging-SE3H4j.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 324,
+            "name": "Not Sad",
+            "jp_name": null,
+            "slug": "Not-Sad",
+            "image": "https://i.idol.st/u/song/324Not-Sad-kss0on.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 329,
+            "name": "MONSTER GIRLS",
+            "jp_name": null,
+            "slug": "MONSTER-GIRLS",
+            "image": "https://i.idol.st/u/song/329MONSTER-GIRLS-ThZtkK.png",
+            "characters": [
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 344,
+            "name": "LIVE with a smile!",
+            "jp_name": null,
+            "slug": "LIVE-with-a-smile",
+            "image": "https://i.idol.st/u/song/344LIVE-with-a-smile-wCseJB.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 346,
+            "name": "Miracle STAY TUNE!",
+            "jp_name": "ミラクル STAY TUNE!",
+            "slug": "Miracle-STAY-TUNE",
+            "image": "https://i.idol.st/u/song/346Miracle-STAY-TUNE-vBoGXl.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 348,
+            "name": "L! L! L! (Love the Life We Live)",
+            "jp_name": null,
+            "slug": "L-L-L-Love-the-Life-We-Live",
+            "image": "https://i.idol.st/u/song/348L-L-L-Love-the-Life-We-Live-kPDAae.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 353,
+            "name": "Toy Doll",
+            "jp_name": null,
+            "slug": "Toy-Doll",
+            "image": "https://i.idol.st/u/song/353Toy-Doll-u1NFSL.jpg",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 354,
+            "name": "Ye Mingzhu",
+            "jp_name": "夜明珠",
+            "slug": "Ye-Mingzhu",
+            "image": "https://i.idol.st/u/song/354Ye-Mingzhu-RZMoCJ.jpg",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 355,
+            "name": "Break The System",
+            "jp_name": null,
+            "slug": "Break-The-System",
+            "image": "https://i.idol.st/u/song/355Break-The-System-QtPJTs.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 356,
+            "name": "TO BE YOURSELF",
+            "jp_name": null,
+            "slug": "TO-BE-YOURSELF",
+            "image": "https://i.idol.st/u/song/356TO-BE-YOURSELF-lE70Ce.jpg",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 357,
+            "name": "Eieisa",
+            "jp_name": "エイエ戦サ",
+            "slug": "Eieisa",
+            "image": "https://i.idol.st/u/song/357Eieisa-LkY8PE.jpg",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 358,
+            "name": "Turn it Up!",
+            "jp_name": null,
+            "slug": "Turn-it-Up",
+            "image": "https://i.idol.st/u/song/358Turn-it-Up-KGQDE1.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 359,
+            "name": "Diabolic mulier",
+            "jp_name": null,
+            "slug": "Diabolic-mulier",
+            "image": "https://i.idol.st/u/song/359Diabolic-mulier-no7t0J.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 360,
+            "name": "Silent Blaze",
+            "jp_name": null,
+            "slug": "Silent-Blaze",
+            "image": "https://i.idol.st/u/song/360Silent-Blaze-y8KL97.jpg",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 361,
+            "name": "Yada!",
+            "jp_name": "ヤダ！",
+            "slug": "Yada",
+            "image": "https://i.idol.st/u/song/361Yada-ZLjqzP.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 362,
+            "name": "Itsu datte for you!",
+            "jp_name": "いつだって for you!",
+            "slug": "Itsu-datte-for-you",
+            "image": "https://i.idol.st/u/song/362Itsu-datte-for-you-dyU6In.jpg",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 363,
+            "name": "First Love Again",
+            "jp_name": null,
+            "slug": "First-Love-Again",
+            "image": "https://i.idol.st/u/song/363First-Love-Again-WqteXd.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 364,
+            "name": "Concentrate!",
+            "jp_name": "コンセントレイト！",
+            "slug": "Concentrate",
+            "image": "https://i.idol.st/u/song/364Concentrate-wbXbF3.jpg",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 403,
+            "name": "Yume ga Bokura no Taiyou sa",
+            "jp_name": "夢が僕らの太陽さ",
+            "slug": "Yume-ga-Bokura-no-Taiyou-sa",
+            "image": "https://i.idol.st/u/song/403Yume-ga-Bokura-no-Taiyou-sa-tnpKbS.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 404,
+            "name": "Ryouran! Victory Road",
+            "jp_name": "繚乱！ビクトリーロード",
+            "slug": "Ryouran-Victory-Road",
+            "image": "https://i.idol.st/u/song/404Ryouran-Victory-Road-sVPknE.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 405,
+            "name": "Eutopia",
+            "jp_name": null,
+            "slug": "Eutopia",
+            "image": "https://i.idol.st/u/song/405Eutopia-pZUHQN.png",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 406,
+            "name": "Colorful Dreams! Colorful Smiles!",
+            "jp_name": null,
+            "slug": "Colorful-Dreams-Colorful-Smiles",
+            "image": "https://i.idol.st/u/song/406Colorful-Dreams-Colorful-Smiles-7uNAZE.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 407,
+            "name": "Twilight",
+            "jp_name": "トワイライト",
+            "slug": "Twilight",
+            "image": "https://i.idol.st/u/song/407Twilight-O59Nvu.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 408,
+            "name": "ENJOY IT!",
+            "jp_name": "ENJOY IT",
+            "slug": "ENJOY-IT",
+            "image": "https://i.idol.st/u/song/408ENJOY-IT-uCWzcY.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 409,
+            "name": "4 SEASONS",
+            "jp_name": null,
+            "slug": "4-SEASONS",
+            "image": "https://i.idol.st/u/song/409SEASONS-GfzkKv.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 410,
+            "name": "Eternal Light",
+            "jp_name": null,
+            "slug": "Eternal-Light",
+            "image": "https://i.idol.st/u/song/410Eternal-Light-EJoxKv.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 411,
+            "name": "Koisuru Magic!!",
+            "jp_name": "恋するMagic!!",
+            "slug": "Koisuru-Magic",
+            "image": "https://i.idol.st/u/song/411Koisuru-Magic-w2cSLi.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 413,
+            "name": "Infinity！Our wings!!",
+            "jp_name": "Infinity!Our wings!!",
+            "slug": "Infinity-Our-wings",
+            "image": "https://i.idol.st/u/song/413Infinity-Our-wings-hIw54W.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 414,
+            "name": "Poker face & Onegai! Fairy",
+            "jp_name": "Poker face＆お願い！Fairy",
+            "slug": "Poker-face-Onegai-Fairy",
+            "image": "https://i.idol.st/u/song/414Poker-face-Onegai-Fairy-pWfdRV.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 415,
+            "name": "EMOTION",
+            "jp_name": null,
+            "slug": "EMOTION",
+            "image": "https://i.idol.st/u/song/415EMOTION-CwYcIc.png",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 416,
+            "name": "FASHIONISTA",
+            "jp_name": null,
+            "slug": "FASHIONISTA",
+            "image": "https://i.idol.st/u/song/416FASHIONISTA-neioVx.png",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 418,
+            "name": "stars we chase",
+            "jp_name": null,
+            "slug": "stars-we-chase",
+            "image": "https://i.idol.st/u/song/418stars-we-chase-Bsj09X.png",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 420,
+            "name": "Future Parade",
+            "jp_name": null,
+            "slug": "Future-Parade",
+            "image": "https://i.idol.st/u/song/420Future-Parade-Nad4Pt.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 421,
+            "name": "Level Oops! Adventures",
+            "jp_name": null,
+            "slug": "Level-Oops-Adventures",
+            "image": "https://i.idol.st/u/song/421Level-Oops-Adventures-kqpFQf.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 422,
+            "name": "Fuwa Fuwa Hour!",
+            "jp_name": "Fuwa Fuwaアワー!",
+            "slug": "Fuwa-Fuwa-Hour",
+            "image": "https://i.idol.st/u/song/422Fuwa-Fuwa-Hour-44Idsh.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 430,
+            "name": "Romansu no Naka de",
+            "jp_name": "ロマンスの中で",
+            "slug": "Romansu-no-Naka-de",
+            "image": "https://i.idol.st/u/song/430Romansu-no-Naka-de-pg415H.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 433,
+            "name": "Vroom Vroom",
+            "jp_name": null,
+            "slug": "Vroom-Vroom",
+            "image": "https://i.idol.st/u/song/433Vroom-Vroom-1UO8lK.png",
+            "characters": [
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 434,
+            "name": "Eien no Isshun",
+            "jp_name": "永遠の一瞬",
+            "slug": "Eien-no-Isshun",
+            "image": "https://i.idol.st/u/song/434Eien-no-Issyun-TS2uGp.jpeg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 440,
+            "name": "Shadow Effect",
+            "jp_name": null,
+            "slug": "Shadow-Effect",
+            "image": "https://i.idol.st/u/song/440Shadow-Effect-aOUeyW.jpeg",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 443,
+            "name": "Look at me now",
+            "jp_name": null,
+            "slug": "Look-at-me-now",
+            "image": "https://i.idol.st/u/song/443Look-at-me-now-1e2ZJC.png",
+            "characters": [
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 447,
+            "name": "Bubble Over!",
+            "jp_name": "バブルオーバー！",
+            "slug": "Bubble-Over",
+            "image": "https://i.idol.st/u/song/447Bubble-Over-p8gDLG.png",
+            "characters": [
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 452,
+            "name": "TOKIMEKI Runners (12 People Ver.)",
+            "jp_name": "TOKIMEKI Runners (12人Ver.)",
+            "slug": "TOKIMEKI-Runners-12-People-Ver",
+            "image": "https://i.idol.st/u/song/452TOKIMEKI-Runners-12-People-Ver-UV6Jem.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 453,
+            "name": "Kiss the Sun",
+            "jp_name": null,
+            "slug": "Kiss-the-Sun",
+            "image": "https://i.idol.st/u/song/453Kiss-the-Sun-Sg7FLh.jpeg",
+            "characters": [
+                "Karin-Asaka",
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 454,
+            "name": "Blue!",
+            "jp_name": null,
+            "slug": "Blue",
+            "image": "https://i.idol.st/u/song/454Blue-O1fv3W.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 455,
+            "name": "Dancing in the Light",
+            "jp_name": null,
+            "slug": "Dancing-in-the-Light",
+            "image": "https://i.idol.st/u/song/455Dancing-in-the-Light-zVf90t.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Shizuku-Osaka",
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 456,
+            "name": "OUR P13CES!!!",
+            "jp_name": null,
+            "slug": "OUR-P13CES",
+            "image": "https://i.idol.st/u/song/456OUR-P13CES-XapWn9.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 457,
+            "name": "Hurray Hurray (12 People Ver.)",
+            "jp_name": null,
+            "slug": "Hurray-Hurray-12-People-Ver",
+            "image": "https://i.idol.st/u/song/457Hurray-Hurray-12-People-Ver-Xj50yr.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 465,
+            "name": "PASTEL",
+            "jp_name": null,
+            "slug": "PASTEL",
+            "image": "https://i.idol.st/u/song/465PASTEL-aIEqEK.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 466,
+            "name": "Michinosaki",
+            "jp_name": "ミチノサキ",
+            "slug": "Michinosaki",
+            "image": "https://i.idol.st/u/song/466Michinosaki-LX2QYr.png",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 467,
+            "name": "Love U my friends (12 People Ver.)",
+            "jp_name": "Love U my friends（12人Ver.)",
+            "slug": "Love-U-my-friends-12-People-Ver",
+            "image": "https://i.idol.st/u/song/467Love-U-my-friends-12-People-Ver-ADr0ea.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 470,
+            "name": "What You Gonna Do?",
+            "jp_name": "わちゅごなどぅー",
+            "slug": "What-You-Gonna-Do",
+            "image": "https://i.idol.st/u/song/470Wachugonado-xHOyP3.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 471,
+            "name": "Just Believe!!! (12 People Ver.)",
+            "jp_name": "Just Believe!!!（12人Ver.)",
+            "slug": "Just-Believe-12-People-Ver",
+            "image": "https://i.idol.st/u/song/471Just-Believe-12-People-Ver-8MFEhA.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 534,
+            "name": "KAGAYAKI Don't forget!",
+            "jp_name": null,
+            "slug": "KAGAYAKI-Don-t-forget",
+            "image": "https://i.idol.st/u/song/534KAGAYAKI-Don-t-forget-ciiZj9.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 535,
+            "name": "Sugar Sugar Yummy Yummy Parfait",
+            "jp_name": null,
+            "slug": "Sugar-Sugar-Yummy-Yummy-Parfait",
+            "image": "https://i.idol.st/u/song/535Sugar-Sugar-Yummy-Yummy-Parfait-C7XUeP.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 540,
+            "name": "Waku Waku! Monday Morning",
+            "jp_name": null,
+            "slug": "Waku-Waku-Monday-Morning",
+            "image": "https://i.idol.st/u/song/540Waku-Waku-Monday-Morning-XVjFvD.jpg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Rina-Tennoji",
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 545,
+            "name": "Feel Alive",
+            "jp_name": null,
+            "slug": "Feel-Alive",
+            "image": "https://i.idol.st/u/song/545Feel-Alive-IOiVzw.jpg",
+            "characters": [
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 546,
+            "name": "Go Our Way!",
+            "jp_name": null,
+            "slug": "Go-Our-Way",
+            "image": "https://i.idol.st/u/song/546Go-Our-Way-HRYHkN.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 547,
+            "name": "SINGING, DREAMING, NOW!",
+            "jp_name": null,
+            "slug": "SINGING-DREAMING-NOW",
+            "image": "https://i.idol.st/u/song/547SINGING-DREAMING-NOW-SRPJps.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 548,
+            "name": "Wawawa☆What's up!",
+            "jp_name": null,
+            "slug": "Wawawa-What-s-up",
+            "image": "https://i.idol.st/u/song/548Wawawa-What-s-up-OduAku.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 578,
+            "name": "Ijigen★♥BIGBANG",
+            "jp_name": "異次元★♥BIGBANG",
+            "slug": "Ijigen-BIGBANG",
+            "image": "https://i.idol.st/u/song/578Ijigen-BIGBANG-hPlnLT.jpg",
+            "characters": [
+                "Cross-Gen"
+            ]
+        },
+        {
+            "id": 579,
+            "name": "Walking Dream",
+            "jp_name": null,
+            "slug": "Walking-Dream",
+            "image": "https://i.idol.st/u/song/579Walking-Dream-NB7Tfe.png",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 580,
+            "name": "Senobi Shitatte",
+            "jp_name": "背伸びしたって",
+            "slug": "Senobi-Shitatte",
+            "image": "https://i.idol.st/u/song/580Senobi-Shitatte-6PSCns.png",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 581,
+            "name": "Koakuma LOVE♡",
+            "jp_name": "小悪魔LOVE♡",
+            "slug": "Koakuma-LOVE",
+            "image": "https://i.idol.st/u/song/581Koakuma-LOVE-5pR28M.png",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 582,
+            "name": "My Shadow",
+            "jp_name": null,
+            "slug": "My-Shadow",
+            "image": "https://i.idol.st/u/song/582My-Shadow-EzuSfV.png",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 583,
+            "name": "Request for U",
+            "jp_name": null,
+            "slug": "Request-for-U",
+            "image": "https://i.idol.st/u/song/583Request-for-U-sBoA6M.png",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 584,
+            "name": "Cooking with Love",
+            "jp_name": null,
+            "slug": "Cooking-with-Love",
+            "image": "https://i.idol.st/u/song/584Cooking-with-Love-0eAez6.png",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 585,
+            "name": "Cherry Bomb",
+            "jp_name": "チェリーボム",
+            "slug": "Cherry-Bomb",
+            "image": "https://i.idol.st/u/song/585Cherry-Bomb-4kzg57.png",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 586,
+            "name": "Koisuru Sunflower",
+            "jp_name": "恋するSunflower",
+            "slug": "Koisuru-Sunflower",
+            "image": "https://i.idol.st/u/song/586Koisuru-Sunflower-mc3qYf.png",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 587,
+            "name": "Watashi wa Magnet",
+            "jp_name": "私はマグネット",
+            "slug": "Watashi-wa-Magnet",
+            "image": "https://i.idol.st/u/song/587Watashi-wa-Magnet-Ryb3NK.png",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 588,
+            "name": "Koufukuron",
+            "jp_name": "咬福論",
+            "slug": "Koufukuron",
+            "image": "https://i.idol.st/u/song/588Koufukuron-bxlb4Q.png",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 589,
+            "name": "Lemonade",
+            "jp_name": null,
+            "slug": "Lemonade",
+            "image": "https://i.idol.st/u/song/589Lemonade-3EGrCA.png",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 590,
+            "name": "Wo Ai Ni Yi Sheng Yi Shi",
+            "jp_name": "5201314",
+            "slug": "Wo-Ai-Ni-Yi-Sheng-Yi-Shi",
+            "image": "https://i.idol.st/u/song/5905201314-VjaXu6.png",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 591,
+            "name": "Fly with You!!",
+            "jp_name": null,
+            "slug": "Fly-with-You",
+            "image": "https://i.idol.st/u/song/591Fly-with-You-TMDhIn.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 630,
+            "name": "New Year's March!",
+            "jp_name": null,
+            "slug": "New-Year-s-March",
+            "image": "https://i.idol.st/u/song/630New-Year-s-March-5BDpSC.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 666,
+            "name": "Bring the LOVE!",
+            "jp_name": null,
+            "slug": "Bring-the-LOVE",
+            "image": "https://i.idol.st/u/song/666Bring-the-LOVE-G16Mrj.jpg",
+            "characters": [
+                "Cross-Gen"
+            ]
+        },
+        {
+            "id": 667,
+            "name": "Doko ni Itemo Kimi wa Kimi",
+            "jp_name": "どこにいても君は君",
+            "slug": "Doko-ni-Itemo-Kimi-wa-Kimi",
+            "image": "https://i.idol.st/u/song/667Doko-ni-Itemo-Kimi-wa-Kimi-AXuuxR.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 671,
+            "name": "Rise Up High!",
+            "jp_name": null,
+            "slug": "Rise-Up-High",
+            "image": "https://i.idol.st/u/song/671Rise-Up-High-q33I8y.png",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 672,
+            "name": "Daydream Mermaid",
+            "jp_name": null,
+            "slug": "Daydream-Mermaid",
+            "image": "https://i.idol.st/u/song/672Daydream-Mermaid-NLjxJ6.png",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 673,
+            "name": "Cara Tesoro",
+            "jp_name": "Dear Treasure",
+            "slug": "Cara-Tesoro",
+            "image": "https://i.idol.st/u/song/673Cara-Tesoro-nB3H9F.png",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 674,
+            "name": "PHOENIX",
+            "jp_name": null,
+            "slug": "PHOENIX",
+            "image": "https://i.idol.st/u/song/674PHOENIX-z2eiqz.png",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 675,
+            "name": "Stellar Stream",
+            "jp_name": null,
+            "slug": "Stellar-Stream",
+            "image": "https://i.idol.st/u/song/675Stellar-Stream-yWOHDs.png",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 693,
+            "name": "White Delight",
+            "jp_name": null,
+            "slug": "White-Delight",
+            "image": "https://i.idol.st/u/song/693White-Delight-OrtQI3.png",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 694,
+            "name": "Poka Poka Biyori",
+            "jp_name": "Poka Poka 日和",
+            "slug": "Poka-Poka-Biyori",
+            "image": "https://i.idol.st/u/song/694Poka-Poka-Biyori-DngFRG.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Ai-Miyashita",
+                "Setsuna-Yuki",
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 708,
+            "name": "Ai♡Scream!",
+            "jp_name": "愛♡スクリ～ム！",
+            "slug": "Ai-Scream",
+            "image": "https://i.idol.st/u/song/708Ai-Scream-xJ6W0a.jpg",
+            "characters": [
+                "Cross-Gen"
+            ]
+        },
+        {
+            "id": 709,
+            "name": "ICE LIMIT",
+            "jp_name": null,
+            "slug": "ICE-LIMIT",
+            "image": "https://i.idol.st/u/song/709ICE-LIMIT-ITntyT.jpg",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 710,
+            "name": "Joy is All Around",
+            "jp_name": null,
+            "slug": "Joy-is-All-Around",
+            "image": "https://i.idol.st/u/song/710Joy-is-All-Around-wBD4iU.png",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 719,
+            "name": "Starry Night Serenade",
+            "jp_name": null,
+            "slug": "Starry-Night-Serenade",
+            "image": "https://i.idol.st/u/song/719Starry-Night-Serenade-zLF6OT.png",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 720,
+            "name": "Dream☆Shooter",
+            "jp_name": "ドリーム☆シューター",
+            "slug": "Dream-Shooter",
+            "image": "https://i.idol.st/u/song/720Dream-Shooter-HmnEJe.png",
+            "characters": [
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 721,
+            "name": "The Sweetest Time♡",
+            "jp_name": null,
+            "slug": "The-Sweetest-Time",
+            "image": "https://i.idol.st/u/song/721The-Sweetest-Time-7cGhkC.png",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 730,
+            "name": "Nijiiro☆Lumiere",
+            "jp_name": "にじいろ☆ルミエール",
+            "slug": "Nijiiro-Lumiere",
+            "image": "https://i.idol.st/u/song/730Nijiiro-Lumiere-aQv9rb.png",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 732,
+            "name": "secret",
+            "jp_name": null,
+            "slug": "secret",
+            "image": "https://i.idol.st/u/song/732secret-xrA4jR.png",
+            "characters": [
+                "Ayumu-Uehara"
+            ]
+        },
+        {
+            "id": 735,
+            "name": "Hello! OK??",
+            "jp_name": null,
+            "slug": "Hello-OK",
+            "image": "https://i.idol.st/u/song/735Hello-OK-ZDTdAQ.png",
+            "characters": [
+                "Kasumi-Nakasu"
+            ]
+        },
+        {
+            "id": 736,
+            "name": "Eternalize Love!!",
+            "jp_name": null,
+            "slug": "Eternalize-Love",
+            "image": "https://i.idol.st/u/song/736Eternalize-Love-c1ZVPm.png",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 737,
+            "name": "What a Beautiful Day!",
+            "jp_name": null,
+            "slug": "What-a-Beautiful-Day",
+            "image": "https://i.idol.st/u/song/737What-a-Beautiful-Day-F5jXYZ.png",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 740,
+            "name": "INNER TRAVEL",
+            "jp_name": null,
+            "slug": "INNER-TRAVEL",
+            "image": "https://i.idol.st/u/song/740INNER-TRAVEL-KsF31V.png",
+            "characters": [
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 741,
+            "name": "Pichi Chapu Tinton Tanton",
+            "jp_name": "ピチチャプティントンタントン",
+            "slug": "Pichi-Chapu-Tinton-Tanton",
+            "image": "https://i.idol.st/u/song/741Pichi-Chapu-Tinton-Tanton-H2Yf8V.png",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 753,
+            "name": "Ride the wave!",
+            "jp_name": null,
+            "slug": "Ride-the-wave",
+            "image": "https://i.idol.st/u/song/753Ride-the-wave-4ewhzC.png",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 754,
+            "name": "My Untold Diary",
+            "jp_name": null,
+            "slug": "My-Untold-Diary",
+            "image": "https://i.idol.st/u/song/754My-Untold-Diary-bROJ8M.png",
+            "characters": [
+                "Shizuku-Osaka"
+            ]
+        },
+        {
+            "id": 777,
+            "name": "SUMMER WARNING",
+            "jp_name": null,
+            "slug": "SUMMER-WARNING",
+            "image": "https://i.idol.st/u/song/777SUMMER-WARNING-fJKrw7.png",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 778,
+            "name": "Sanketsu",
+            "jp_name": "酸欠",
+            "slug": "Sanketsu",
+            "image": "https://i.idol.st/u/song/778Sanketsu-hPIaid.png",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 784,
+            "name": "Dress Code",
+            "jp_name": null,
+            "slug": "Dress-Code",
+            "image": "https://i.idol.st/u/song/784Dress-Code-0vtM2t.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 794,
+            "name": "YES! to Tomorrow",
+            "jp_name": null,
+            "slug": "YES-to-Tomorrow",
+            "image": "https://i.idol.st/u/song/794YES-to-Tomorrow-Ckc07X.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 795,
+            "name": "Bravo!",
+            "jp_name": null,
+            "slug": "Bravo",
+            "image": "https://i.idol.st/u/song/795Bravo-tLCEsN.jpg",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 796,
+            "name": "Manmaru Otsukisama",
+            "jp_name": "まんまるお月さま",
+            "slug": "Manmaru-Otsukisama",
+            "image": "https://i.idol.st/u/song/MBpr8CManmaru-Otsukisama-EqtMkl.png",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 800,
+            "name": "Ma-Mi-Mu-Me Motor Girl",
+            "jp_name": "まみむめMotor Girl",
+            "slug": "Ma-Mi-Mu-Me-Motor-Girl",
+            "image": "https://i.idol.st/u/song/5vYDG1Ma-Mi-Mu-Me-Motor-Girl-zSN34L.png",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 803,
+            "name": "Yoin",
+            "jp_name": "余韻",
+            "slug": "Yoin",
+            "image": "https://i.idol.st/u/song/rLTVT0Yoin-7h71g5.png",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 813,
+            "name": "Wake Up!!",
+            "jp_name": null,
+            "slug": "Wake-Up",
+            "image": "https://i.idol.st/u/song/g85GSBWake-Up-S1fIHW.jpg",
+            "characters": [
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 817,
+            "name": "Fuwafuwari",
+            "jp_name": "ふわふわり",
+            "slug": "Fuwafuwari",
+            "image": "https://i.idol.st/u/song/we23SSNIJIGAKU-Flower-Music-Dandelion-jW5LcD.jpg",
+            "characters": [
+                "Kasumi-Nakasu",
+                "Emma-Verde"
+            ]
+        },
+        {
+            "id": 818,
+            "name": "Wonder Mates",
+            "jp_name": "ワンダーメイツ",
+            "slug": "Wonder-Mates",
+            "image": "https://i.idol.st/u/song/HMBHPwNIJIGAKU-Flower-Music-Morning-Glory-noOyvm.jpg",
+            "characters": [
+                "Shizuku-Osaka",
+                "Kanata-Konoe"
+            ]
+        },
+        {
+            "id": 819,
+            "name": "VIVA!",
+            "jp_name": null,
+            "slug": "VIVA",
+            "image": "https://i.idol.st/u/song/yDG2hANIJIGAKU-Flower-Music-Daisy-mfM1B9.jpg",
+            "characters": [
+                "Rina-Tennoji",
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 820,
+            "name": "SAVOTINA!!",
+            "jp_name": null,
+            "slug": "SAVOTINA",
+            "image": "https://i.idol.st/u/song/bjNmGuNIJIGAKU-Flower-Music-Cactus-sggS8U.jpg",
+            "characters": [
+                "Setsuna-Yuki",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 821,
+            "name": "DIZZY LILY VALLEY",
+            "jp_name": null,
+            "slug": "DIZZY-LILY-VALLEY",
+            "image": "https://i.idol.st/u/song/gEfVRBNIJIGAKU-Flower-Music-Lily-of-the-Valley-SaUbfN.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Karin-Asaka"
+            ]
+        },
+        {
+            "id": 822,
+            "name": "SOL de ROSA",
+            "jp_name": null,
+            "slug": "SOL-de-ROSA",
+            "image": "https://i.idol.st/u/song/JBtJKkNIJIGAKU-Flower-Music-Hibiscus-5WH4fa.jpg",
+            "characters": [
+                "Ai-Miyashita",
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 827,
+            "name": "think of you",
+            "jp_name": null,
+            "slug": "think-of-you",
+            "image": "https://i.idol.st/u/song/Aow5BKthink-of-you-lokQg7.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 836,
+            "name": "Itoshiki Yume yo Izanaite",
+            "jp_name": "いとしき夢よ いざないて",
+            "slug": "Itoshiki-Yume-yo-Izanaite",
+            "image": "https://i.idol.st/u/song/RdRENYItoshiki-Yume-yo-Izanaite-3H0lwW.jpg",
+            "characters": [
+                "Shioriko-Mifune"
+            ]
+        },
+        {
+            "id": 838,
+            "name": "Like a Treasure",
+            "jp_name": null,
+            "slug": "Like-a-Treasure",
+            "image": "https://i.idol.st/u/song/VMiABNLike-a-Treasure-2nMJuQ.jpg",
+            "characters": [
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 839,
+            "name": "Stay",
+            "jp_name": null,
+            "slug": "Stay",
+            "image": "https://i.idol.st/u/song/g3OdajStay-gMPYBh.jpg",
+            "characters": [
+                "Rina-Tennoji"
+            ]
+        },
+        {
+            "id": 840,
+            "name": "Burn!!",
+            "jp_name": null,
+            "slug": "Burn",
+            "image": "https://i.idol.st/u/song/1kXXVWBurn-FgWeUS.jpg",
+            "characters": [
+                "Setsuna-Yuki"
+            ]
+        },
+        {
+            "id": 841,
+            "name": "Circle of Love",
+            "jp_name": null,
+            "slug": "Circle-of-Love",
+            "image": "https://i.idol.st/u/song/DMhqSjCircle-of-Love-eIElMi.jpg",
+            "characters": [
+                "Ai-Miyashita"
+            ]
+        },
+        {
+            "id": 842,
+            "name": "Yakusoku ni Nare Bokura no Uta",
+            "jp_name": "約束になれ僕らの歌",
+            "slug": "Yakusoku-ni-Nare-Bokura-no-Uta",
+            "image": "https://i.idol.st/u/song/67sxDNYakusoku-ni-Nare-Bokura-no-Uta-9ewKtM.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 843,
+            "name": "Boooooom Boooooom Bee!!",
+            "jp_name": null,
+            "slug": "Boooooom-Boooooom-Bee",
+            "image": "https://i.idol.st/u/song/843Boooooom-Boooooom-Bee-hQcS6O.jpg",
+            "characters": [
+                "Ayumu-Uehara",
+                "Kasumi-Nakasu",
+                "Shizuku-Osaka",
+                "Karin-Asaka",
+                "Ai-Miyashita",
+                "Kanata-Konoe",
+                "Setsuna-Yuki",
+                "Emma-Verde",
+                "Rina-Tennoji",
+                "Shioriko-Mifune",
+                "Lanzhu-Zhong",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 844,
+            "name": "Seabird",
+            "jp_name": null,
+            "slug": "Seabird",
+            "image": "https://i.idol.st/u/song/DBZGIFSeabird-00oI83.jpg",
+            "characters": [
+                "Lanzhu-Zhong"
+            ]
+        },
+        {
+            "id": 873,
+            "name": "CORO CORO Lovely TIME!!!",
+            "jp_name": "CORO CORO ラブリーTIME!!!",
+            "slug": "CORO-CORO-Lovely-TIME",
+            "image": "https://i.idol.st/u/song/k3YJhACORO-CORO-Lovely-TIME-Lhc1Vw.jpg",
+            "characters": [
+                "Karin-Asaka",
+                "Kanata-Konoe",
+                "Emma-Verde",
+                "Mia-Taylor"
+            ]
+        },
+        {
+            "id": 935,
+            "name": "NEXT CARD",
+            "jp_name": null,
+            "slug": "NEXT-CARD",
+            "image": "https://static.wikia.nocookie.net/love-live/images/0/07/AiScReam_NEXT_CARD_Digital_Release.jpg",
+            "characters": [
+                "Cross-Gen"
+            ]
+        }
+    ]
+}

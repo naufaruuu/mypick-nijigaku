@@ -1,0 +1,11 @@
+node_modules
+.next
+out
+dist
+*.local
+.DS_Store
+
+# secrets
+.env
+.env.*
+!.env.example

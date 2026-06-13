@@ -1,0 +1,101 @@
+{
+    "songs-override": [
+        {
+            "slug": "NEXT-CARD",
+            "override": {
+                "image": "https://static.wikia.nocookie.net/love-live/images/0/07/AiScReam_NEXT_CARD_Digital_Release.jpg", 
+                "characters": [
+                    "Cross-Gen"
+                ]
+            }
+        },
+        {
+            "slug": "Ai-Scream",
+            "override": {
+                "characters": [
+                    "Cross-Gen"
+                ]
+            }
+        },
+        {
+            "slug": "Bring-the-LOVE",
+            "override": {
+                "characters": [
+                    "Cross-Gen"
+                ]
+            }
+        },
+        {
+            "slug": "Ijigen-BIGBANG",
+            "override": {
+                "characters": [
+                    "Cross-Gen"
+                ]
+            }
+        },
+        {
+            "slug": "CORO-CORO-Lovely-TIME",
+            "override": {
+                "characters": [
+                    "3rd Grade Students"
+                ]
+            }
+        },
+        {
+            "slug": "SOL-de-ROSA",
+            "override": {
+                "characters": [
+                    "Ai-Lanzhu"
+                ]
+            }
+        },
+        {
+            "slug": "DIZZY-LILY-VALLEY",
+            "override": {
+                "characters": [
+                    "Ayumu-Karin"
+                ]
+            }
+        },
+        {
+            "slug": "SAVOTINA",
+            "override": {
+                "characters": [
+                    "Setsuna-Mia"
+                ]
+            }
+        },
+        {
+            "slug": "VIVA",
+            "override": {
+                "characters": [
+                    "Rina-Shioriko"
+                ]
+            }
+        },
+        {
+            "slug": "Fuwafuwari",
+            "override": {
+                "characters": [
+                    "Kasumi-Emma"
+                ]
+            }
+        },
+        {
+            "slug": "Wonder-Mates",
+            "override": {
+                "characters": [
+                    "Shizuku-Kanata"
+                ]
+            }
+        },
+        {
+            "slug": "Waku-Waku-Monday-Morning",
+            "override": {
+                "characters": [
+                    "1s Grade Students"
+                ]
+            }
+        }
+    ]
+}

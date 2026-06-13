@@ -1,0 +1,109 @@
+{{- $cfg := .Values.web -}}
+{{- $nginx := $cfg.sidecars.nginx -}}
+{{- $svc := $cfg.service -}}
+{{- $webPort := $cfg.port | int -}}
+{{- $nginxPort := $nginx.port | int -}}
+{{- $svcPort := ternary $nginxPort $webPort $nginx.enabled -}}
+{{- if $nginx.enabled }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "mypick-nijigasaki.fullname" . }}-web-nginx
+  labels:
+    {{- include "mypick-nijigasaki.componentLabels" (merge (dict "component" "web") .) | nindent 4 }}
+data:
+  web.conf: |
+{{ tpl (.Files.Get $nginx.config) . | indent 4 }}
+---
+{{- end }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mypick-nijigasaki.fullname" . }}-web
+  labels:
+    {{- include "mypick-nijigasaki.componentLabels" (merge (dict "component" "web") .) | nindent 4 }}
+spec:
+  replicas: {{ $cfg.replicas }}
+  selector:
+    matchLabels:
+      {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "web") .) | nindent 6 }}
+  template:
+    metadata:
+      {{- if $nginx.enabled }}
+      annotations:
+        # Roll the pod when nginx config changes.
+        checksum/nginx-config: {{ tpl (.Files.Get $nginx.config) . | sha256sum }}
+      {{- end }}
+      labels:
+        {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "web") .) | nindent 8 }}
+    spec:
+      {{- include "mypick-nijigasaki.imagePullSecrets" . | nindent 6 }}
+      nodeSelector:
+        {{- include "mypick-nijigasaki.nodeSelector" (merge (dict "componentNodeSelector" $cfg.nodeSelector) .) | nindent 8 }}
+      containers:
+        - name: web
+          image: {{ include "mypick-nijigasaki.image" (dict "root" $ "key" "web") }}
+          imagePullPolicy: {{ include "mypick-nijigasaki.imagePullPolicy" (dict "root" $ "key" "web") }}
+          ports:
+            - name: web
+              containerPort: {{ $webPort }}
+          env:
+            - name: PORT
+              # Single source for the Next.js listen port (web.port).
+              value: {{ $webPort | quote }}
+            - name: REDIS_URL
+              # Cache lives in-cluster; tracks the redis Service so the app
+              # never points at a stale cache. Mirrors the compose default.
+              value: "redis://{{ include "mypick-nijigasaki.fullname" . }}-redis.{{ .Release.Namespace }}.svc.cluster.local:6379"
+            {{- with .Values.ingress.hosts.web }}
+            - name: SITE_URL
+              # Public origin for OG/canonical URLs — always the ingress host so
+              # it can't drift from where traffic actually arrives.
+              value: "https://{{ . }}"
+            {{- end }}
+          envFrom:
+            {{- include "mypick-nijigasaki.envFrom" (dict "root" $ "secrets" (list "web")) | nindent 12 }}
+          resources:
+            {{- toYaml $cfg.resources | nindent 12 }}
+        {{- if $nginx.enabled }}
+        # nginx sidecar — fronts Next.js, terminates external traffic, caches
+        # /_next/static aggressively. Toggle with web.sidecars.nginx.enabled.
+        - name: nginx
+          image: {{ include "mypick-nijigasaki.image" (dict "root" $ "key" "nginx") }}
+          imagePullPolicy: {{ include "mypick-nijigasaki.imagePullPolicy" (dict "root" $ "key" "nginx") }}
+          ports:
+            - name: http
+              containerPort: {{ $nginxPort }}
+          volumeMounts:
+            - name: nginx-conf
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: web.conf
+          resources:
+            {{- toYaml $nginx.resources | nindent 12 }}
+        {{- end }}
+      {{- if $nginx.enabled }}
+      volumes:
+        - name: nginx-conf
+          configMap:
+            name: {{ include "mypick-nijigasaki.fullname" . }}-web-nginx
+      {{- end }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "mypick-nijigasaki.fullname" . }}-web
+  {{- include "mypick-nijigasaki.serviceMeta" (dict "root" $ "component" "web" "svc" $svc) | nindent 2 }}
+spec:
+  type: {{ default "ClusterIP" $svc.type }}
+  {{- include "mypick-nijigasaki.serviceSpecExtras" (dict "svc" $svc) | nindent 2 }}
+  selector:
+    {{- include "mypick-nijigasaki.selectorLabels" (merge (dict "component" "web") .) | nindent 4 }}
+  ports:
+    # When the nginx sidecar is enabled, external traffic goes through it on
+    # 3001; otherwise the Next.js container is exposed directly on 3000.
+    - name: http
+      port: {{ $svcPort }}
+      targetPort: {{ ternary "http" "web" $nginx.enabled }}
+      {{- with $svc.nodePort }}
+      nodePort: {{ . }}
+      {{- end }}

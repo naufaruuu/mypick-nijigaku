@@ -1,0 +1,23 @@
+characters
+
+id: 1
+en_name: Ayumu Uehara
+jp_name: 上原歩夢
+slug: Ayumu-Uehara
+color: #ed7d95
+image: https://ll-mbti-assets.naufalalfa.com/nijigasaki/ayumu.png
+
+songs
+
+id:935
+name: NEXT CARD
+jp_name: null
+slug: NEXT-CARD
+image: https://i.idol.st/u/song/TxtxVJNEXT-CARD-jBdoII.png
+
+songs_singers
+song_id: 935
+character_id: 1
+
+song_id: 935
+character_id: 2
