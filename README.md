@@ -58,8 +58,10 @@ mypick-nijigasaki/
   downloaded image.
 - **Community stats** (`/community-picks`) aggregate all picks in
   `getCommunityStats(lang)` — top songs per category (Nijigasaki / Units / Solo /
-  Others), each row carrying its identity bar color — cached in Redis (60s,
-  per-locale key). `createPick` busts both locale keys on write.
+  Others), each row carrying its identity bar color, plus **Most Diverse
+  Members** (all 12 members ranked by how many distinct songs of theirs were
+  picked) — cached in Redis (60s, per-locale key). `createPick` busts both
+  locale keys on write.
 - **Redis** (`lib/redis.ts`) is an optional best-effort cache; if `REDIS_URL` is
   unset it silently no-ops (falls back to the DB).
 - **i18n**: cookie `lang` (`en`|`ja`), read server-side via `lib/lang.ts`,

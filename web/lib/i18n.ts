@@ -40,6 +40,10 @@ export interface Dict {
   nounCharSongs: string;
   showAll: (n: number, noun: string) => string;
   showLess: string;
+  // most-diverse-members section
+  diverseTitle: string;
+  diverseSub: string;
+  picksCount: (n: number) => string;
   allTitle: string;
   allAccent: string;
   communityNote: string;
@@ -100,6 +104,9 @@ export const dict: Record<Lang, Dict> = {
     nounCharSongs: 'character songs',
     showAll: (n, noun) => `Show all ${n} ${noun}`,
     showLess: 'Show less',
+    diverseTitle: 'Most Diverse Members',
+    diverseSub: 'Whose picks spread across the most different songs',
+    picksCount: (n) => `${n.toLocaleString()} ${n === 1 ? 'pick' : 'picks'}`,
     allTitle: 'All',
     allAccent: 'Songs',
     communityNote:
@@ -158,6 +165,9 @@ export const dict: Record<Lang, Dict> = {
     nounCharSongs: 'キャラソング',
     showAll: (n, noun) => `すべての${n}${noun}を表示`,
     showLess: '表示を減らす',
+    diverseTitle: '選曲が多彩なメンバー',
+    diverseSub: '最も多くの異なる楽曲が選ばれたメンバー',
+    picksCount: (n) => `${n.toLocaleString()}回選曲`,
     allTitle: '楽曲',
     allAccent: '一覧',
     communityNote:

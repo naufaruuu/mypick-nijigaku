@@ -11,7 +11,7 @@ import type { SongsResponse, PicksData, Song, Character } from '@/lib/types';
 const SONGS_KEY = 'songs:v3'; // bumped: image back to the direct CDN url
 const SONGS_TTL = 300; // 5 min — songs change only on reseed
 const PICK_TTL = 86400; // 1 day — picks are immutable once created
-const COMMUNITY_KEY = 'community:v2'; // bumped: SongStat now carries bar color
+const COMMUNITY_KEY = 'community:v3'; // bumped: added diverseMembers
 const COMMUNITY_TTL = 60; // recompute at most once a minute
 const LANGS = Object.keys(dict) as Lang[]; // every locale's community cache key
 
@@ -96,6 +96,19 @@ export interface SongStat {
   light: boolean; // true when `color` is a light solid hex (needs a contrast safeguard)
 }
 
+// Per-member diversity: how varied the community's picks of THAT member's solo
+// songs are — measured by how many distinct songs of theirs got picked.
+export interface MemberDiversity {
+  slug: string;
+  name: string;
+  image: string;
+  color: string;
+  distinct: number; // # of different songs of theirs picked (the sort key)
+  available: number; // # of songs in their solo catalog (bar denominator)
+  picks: number; // total picks of their songs across all boards
+  light: boolean; // light member color → bar needs a contrast safeguard
+}
+
 export interface CommunityStats {
   boards: number; // # of saved pick boards
   picks: number; // total individual selections across all boards
@@ -103,6 +116,7 @@ export interface CommunityStats {
   units: SongStat[];
   solo: SongStat[];
   others: SongStat[];
+  diverseMembers: MemberDiversity[]; // all 12 members, most-diverse first
 }
 
 type Cat = 'group' | 'units' | 'solo' | 'others';
@@ -159,6 +173,8 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
     solo: {},
     others: {},
   };
+  // per-member solo-song tally: memberTally[memberSlug][songSlug] = count
+  const memberTally: Record<string, Record<string, number>> = {};
 
   for (const row of rows) {
     for (const [slotId, slug] of Object.entries(row.data as PicksData)) {
@@ -166,8 +182,32 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
       const bucket = slotId.split('#')[0];
       const cat = catFor(bucket);
       tally[cat][slug] = (tally[cat][slug] ?? 0) + 1;
+      if (cat === 'solo') {
+        (memberTally[bucket] ??= {})[slug] = (memberTally[bucket][slug] ?? 0) + 1;
+      }
     }
   }
+
+  // diversity for every member that has a solo bucket (drops Yu Takasaki → 12),
+  // most distinct songs first; ties broken by total picks.
+  const diverseMembers: MemberDiversity[] = chars
+    .filter((c) => (byBucket[c.slug]?.length ?? 0) > 0)
+    .map((c) => {
+      const m = memberTally[c.slug] ?? {};
+      const picksOfMember = Object.values(m).reduce((a, b) => a + b, 0);
+      const color = charColor[c.slug] ?? '#b8b6ad';
+      return {
+        slug: c.slug,
+        name: charName[c.slug] ?? c.name,
+        image: c.image,
+        color,
+        distinct: Object.keys(m).length,
+        available: byBucket[c.slug].length,
+        picks: picksOfMember,
+        light: color.startsWith('#') && isLightColor(color),
+      };
+    })
+    .sort((a, b) => b.distinct - a.distinct || b.picks - a.picks);
 
   const top = (m: Record<string, number>): SongStat[] =>
     Object.entries(m)
@@ -195,6 +235,7 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
     units: top(tally.units),
     solo: top(tally.solo),
     others: top(tally.others),
+    diverseMembers,
   };
   await cacheSet(cacheKey, stats, COMMUNITY_TTL);
   return stats;

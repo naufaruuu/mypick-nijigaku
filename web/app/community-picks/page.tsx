@@ -4,6 +4,7 @@ import { getCommunityStats } from '@/db/queries';
 import { getLang } from '@/lib/lang';
 import { dict } from '@/lib/i18n';
 import CommunitySection from '@/components/CommunitySection';
+import DiverseMembers from '@/components/DiverseMembers';
 
 export const dynamic = 'force-dynamic';
 
@@ -111,6 +112,16 @@ export default async function CommunityPicks() {
             collapseLabel={t.showLess}
           />
         ))}
+      </div>
+
+      <div className="mt-6">
+        <DiverseMembers
+          title={t.diverseTitle}
+          subhead={t.diverseSub}
+          items={stats.diverseMembers}
+          pickCount={t.picksCount}
+          unit={t.nounSongs}
+        />
       </div>
 
       <p className="mt-6 text-center text-xs text-stone-400">{t.communityNote}</p>
