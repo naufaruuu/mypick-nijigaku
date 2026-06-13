@@ -18,6 +18,14 @@
             }
         },
         {
+            "slug": "ICE-LIMIT",
+            "override": {
+                "characters": [
+                    "Cross-Gen"
+                ]
+            }
+        },
+        {
             "slug": "Bring-the-LOVE",
             "override": {
                 "characters": [

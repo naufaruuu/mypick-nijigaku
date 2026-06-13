@@ -4,7 +4,7 @@ PostgreSQL (host `192.168.18.37:5432`), database **`mypick-nijigasaku`**.
 Schema is defined with Drizzle in [`web/db/schema.ts`](web/db/schema.ts) and
 applied with `bun run db:push`. Seeded from `songs-data/` with `bun run seed`.
 
-Current row counts: `songs` 193 · `characters` 13 · `picks` (grows with shares).
+Current row counts: `songs` 194 · `characters` 13 · `picks` (grows with shares).
 
 ---
 
@@ -14,7 +14,7 @@ sits in exactly one bucket.
 
 | column       | type                        | notes |
 |--------------|-----------------------------|-------|
-| `id`         | `integer` PK                | idol.st song id |
+| `id`         | `integer` PK                | idol.st song id (manual entries not on idol.st use ids ≥ 90000, e.g. `Cheer-Mode`) |
 | `slug`       | `text` NOT NULL, UNIQUE     | join key everywhere |
 | `name`       | `text` NOT NULL             | romaji/English title |
 | `jp_name`    | `text` NULL                 | Japanese title (may be null) |
@@ -32,7 +32,7 @@ Index: `songs_bucket_idx` on `(bucket, sort)` — drives the grouped `getSongs()
 - **Members (character slugs):** `Ayumu-Uehara`, `Kasumi-Nakasu`, `Shizuku-Osaka`,
   `Karin-Asaka`, `Ai-Miyashita`, `Kanata-Konoe`, `Setsuna-Yuki`, `Emma-Verde`,
   `Rina-Tennoji`, `Shioriko-Mifune`, `Lanzhu-Zhong`, `Mia-Taylor`
-- **Catch-all:** `Others` (13)
+- **Catch-all:** `Others` (14)
 
 ---
 

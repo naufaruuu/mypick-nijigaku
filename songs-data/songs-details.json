@@ -2413,6 +2413,16 @@
             "characters": [
                 "Cross-Gen"
             ]
+        },
+        {
+            "id": 90001,
+            "name": "Cheer Mode",
+            "jp_name": null,
+            "slug": "Cheer-Mode",
+            "image": "https://niji-mypick-cdn.naufalalfa.com/nijigasaki-album/Cheer-Mode.webp",
+            "characters": [
+                "Rina-Tennoji"
+            ]
         }
     ]
 }
