@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getSongs } from '@/db/queries';
+import { getSongs, getSongPickCounts } from '@/db/queries';
 import { GROUP, OTHER, SUBUNITS, headerBg, headerText } from '@/lib/layout';
 import { getLang } from '@/lib/lang';
 import { dict } from '@/lib/i18n';
@@ -19,10 +19,24 @@ interface HeaderCfg {
   textColor?: string;
 }
 
-function SongCard({ song }: { song: Song }) {
+function SongCard({ song, count, countTitle }: { song: Song; count: number; countTitle: string }) {
   return (
     <div className="overflow-hidden rounded-[10px] border border-stone-200 bg-white shadow-sm">
-      <img src={song.image} alt={song.name} loading="lazy" className="aspect-square w-full object-cover" />
+      <div className="relative">
+        <img src={song.image} alt={song.name} loading="lazy" className="aspect-square w-full object-cover" />
+        {/* community pick count badge */}
+        <span
+          title={countTitle}
+          className={`absolute right-1 top-1 inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[10px] font-bold tabular-nums backdrop-blur-sm ${
+            count > 0 ? 'bg-black/70 text-white' : 'bg-black/35 text-white/85'
+          }`}
+        >
+          <svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 21s-7.5-4.6-10-9.3C.6 9 1.6 5.5 4.8 4.6c2-.6 3.9.3 5.2 2 1.3-1.7 3.2-2.6 5.2-2 3.2.9 4.2 4.4 2.8 7.1C19.5 16.4 12 21 12 21z" />
+          </svg>
+          {count}
+        </span>
+      </div>
       <div className="p-2">
         <div className="truncate text-xs font-semibold text-stone-900" title={song.name}>
           {song.name}
@@ -37,7 +51,19 @@ function SongCard({ song }: { song: Song }) {
   );
 }
 
-function Section({ label, cfg, songs }: { label: string; cfg: HeaderCfg; songs: Song[] }) {
+function Section({
+  label,
+  cfg,
+  songs,
+  counts,
+  pickLabel,
+}: {
+  label: string;
+  cfg: HeaderCfg;
+  songs: Song[];
+  counts: Record<string, number>;
+  pickLabel: (n: number) => string;
+}) {
   return (
     <section className="mt-7">
       <h2
@@ -47,16 +73,21 @@ function Section({ label, cfg, songs }: { label: string; cfg: HeaderCfg; songs: 
         {label} <span className="opacity-70">· {songs.length}</span>
       </h2>
       <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5">
-        {songs.map((s) => (
-          <SongCard key={s.slug} song={s} />
-        ))}
+        {songs.map((s) => {
+          const c = counts[s.slug] ?? 0;
+          return <SongCard key={s.slug} song={s} count={c} countTitle={pickLabel(c)} />;
+        })}
       </div>
     </section>
   );
 }
 
 export default async function AllSongs() {
-  const [{ songs, characters }, lang] = await Promise.all([getSongs(), getLang()]);
+  const [{ songs, characters }, counts, lang] = await Promise.all([
+    getSongs(),
+    getSongPickCounts(),
+    getLang(),
+  ]);
   const t = dict[lang];
 
   const sections: { key: string; label: string; cfg: HeaderCfg; songs: Song[] }[] = [];
@@ -89,7 +120,14 @@ export default async function AllSongs() {
       </Link>
 
       {sections.map((s) => (
-        <Section key={s.key} label={s.label} cfg={s.cfg} songs={s.songs} />
+        <Section
+          key={s.key}
+          label={s.label}
+          cfg={s.cfg}
+          songs={s.songs}
+          counts={counts}
+          pickLabel={t.picksCount}
+        />
       ))}
     </div>
   );

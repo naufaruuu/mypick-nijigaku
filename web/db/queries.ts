@@ -13,6 +13,8 @@ const SONGS_TTL = 300; // 5 min — songs change only on reseed
 const PICK_TTL = 86400; // 1 day — picks are immutable once created
 const COMMUNITY_KEY = 'community:v3'; // bumped: added diverseMembers
 const COMMUNITY_TTL = 60; // recompute at most once a minute
+const PICKCOUNTS_KEY = 'pickcounts:v1'; // per-song pick totals (locale-agnostic)
+const PICKCOUNTS_TTL = 60;
 const LANGS = Object.keys(dict) as Lang[]; // every locale's community cache key
 
 async function loadSongs(): Promise<SongsResponse> {
@@ -79,8 +81,24 @@ export async function createPick(data: PicksData): Promise<string> {
   await cacheSet(`pick:${id}`, { data } satisfies SavedPick, PICK_TTL);
   // Bust the community-stats cache (both locales) so the new board is reflected
   // on the next /community-picks load instead of waiting out the 60s TTL.
-  await cacheDel(...LANGS.map((l) => `${COMMUNITY_KEY}:${l}`));
+  await cacheDel(...LANGS.map((l) => `${COMMUNITY_KEY}:${l}`), PICKCOUNTS_KEY);
   return id;
+}
+
+// slug -> how many boards picked it, across all picks. Locale-agnostic, so a
+// single cache key. Used by /songs to badge each cover.
+export async function getSongPickCounts(): Promise<Record<string, number>> {
+  const cached = await cacheGet<Record<string, number>>(PICKCOUNTS_KEY);
+  if (cached) return cached;
+  const rows = await getDb().select({ data: picks.data }).from(picks);
+  const counts: Record<string, number> = {};
+  for (const row of rows) {
+    for (const slug of Object.values(row.data as PicksData)) {
+      counts[slug] = (counts[slug] ?? 0) + 1;
+    }
+  }
+  await cacheSet(PICKCOUNTS_KEY, counts, PICKCOUNTS_TTL);
+  return counts;
 }
 
 // ---- community aggregation ----

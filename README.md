@@ -62,6 +62,9 @@ mypick-nijigasaki/
   Members** (all 12 members ranked by how many distinct songs of theirs were
   picked) — cached in Redis (60s, per-locale key). `createPick` busts both
   locale keys on write.
+- **All songs** (`/songs`) lists every song grouped by bucket; each cover is
+  badged with its community pick count via `getSongPickCounts()` (slug→count,
+  cached `pickcounts:v1`, also busted by `createPick`).
 - **Redis** (`lib/redis.ts`) is an optional best-effort cache; if `REDIS_URL` is
   unset it silently no-ops (falls back to the DB).
 - **i18n**: cookie `lang` (`en`|`ja`), read server-side via `lib/lang.ts`,
