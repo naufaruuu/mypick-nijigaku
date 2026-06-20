@@ -161,7 +161,7 @@ export default async function CommunityPicks() {
           body: {
             kind: 'rows',
             rows: toRankRows(stats.group, boards, false),
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.group.length, t.nounSongs),
             collapseLabel: t.showLess,
           },
@@ -185,7 +185,7 @@ export default async function CommunityPicks() {
           body: {
             kind: 'rows',
             rows: toRankRows(stats.units, boards, true),
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.units.length, t.nounUnitSongs),
             collapseLabel: t.showLess,
           },
@@ -226,7 +226,7 @@ export default async function CommunityPicks() {
           body: {
             kind: 'rows',
             rows: toRankRows(stats.solo, boards, true),
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.solo.length, t.nounCharSongs),
             collapseLabel: t.showLess,
           },
@@ -241,7 +241,7 @@ export default async function CommunityPicks() {
           body: {
             kind: 'rows',
             rows: toRankRows(stats.memberLeaders, boards, true),
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.memberLeaders.length, t.nounMembers),
             collapseLabel: t.showLess,
           },
@@ -257,7 +257,7 @@ export default async function CommunityPicks() {
             rows: toDiversity(stats.diverseMembers, t),
             spreadLabel: t.spreadLabel,
             legend: t.diverseLegend,
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.diverseMembers.length, t.nounMembers),
             collapseLabel: t.showLess,
           },
@@ -280,7 +280,7 @@ export default async function CommunityPicks() {
           body: {
             kind: 'rows',
             rows: toRankRows(stats.others, boards, false),
-            defaultCount: 3,
+            defaultCount: 5,
             expandLabel: t.showAll(stats.others.length, t.nounSongs),
             collapseLabel: t.showLess,
           },

@@ -143,9 +143,7 @@ function SwitcherIcon() {
 }
 
 function rankColor(i: number) {
-  if (i === 0) return '#D6A52C';
-  if (i <= 2) return '#6E6A5F';
-  return '#CFCABE';
+  return i === 0 ? '#D6A52C' : '#6E6A5F';
 }
 
 // ---- shared row primitives ----
@@ -184,8 +182,6 @@ function Bar({ pct, color, light }: { pct: number; color: string; light: boolean
 }
 
 function RankRowItem({ r, i }: { r: RankRow; i: number }) {
-  const top3 = i < 3;
-  const barColor = top3 ? r.color : '#D3CEC2';
   return (
     <div className="flex items-center gap-3 px-3 py-3" style={{ borderTop: '.5px solid #F1EDE4' }}>
       <span className="w-6 flex-shrink-0 text-center text-[13.5px] font-extrabold tabular-nums" style={{ color: rankColor(i) }}>
@@ -195,26 +191,26 @@ function RankRowItem({ r, i }: { r: RankRow; i: number }) {
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-2.5">
           <div className="min-w-0 flex-1">
-            <div className="truncate text-[15px] font-bold" style={{ color: top3 ? '#26221A' : '#AEA99D' }}>
+            <div className="truncate text-[15px] font-bold" style={{ color: '#26221A' }}>
               {r.title}
             </div>
             {r.sub && (
-              <div className="truncate text-[12.5px] font-semibold" style={{ color: top3 ? r.color : '#BAB5A9' }}>
+              <div className="truncate text-[12.5px] font-semibold" style={{ color: r.color }}>
                 {r.sub}
               </div>
             )}
           </div>
           <div className="flex-shrink-0 text-right">
-            <div className="text-[14px] leading-tight tabular-nums" style={{ color: top3 ? '#26221A' : '#AEA99D' }}>
+            <div className="text-[14px] leading-tight tabular-nums" style={{ color: '#26221A' }}>
               <span className="font-extrabold">{r.picks}</span>
               {r.denom && <span style={{ color: '#C6C0B2', fontWeight: 600 }}>/{r.denom}</span>}
             </div>
-            <div className="text-[11.5px] font-semibold tabular-nums" style={{ color: top3 ? '#CCA02B' : '#B7B2A6' }}>
+            <div className="text-[11.5px] font-semibold tabular-nums" style={{ color: '#8A857A' }}>
               {r.pctText}
             </div>
           </div>
         </div>
-        <Bar pct={r.pct} color={barColor} light={top3 && r.light} />
+        <Bar pct={r.pct} color={r.color} light={r.light} />
       </div>
     </div>
   );
