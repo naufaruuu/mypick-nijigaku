@@ -4,7 +4,9 @@ import { getCommunityStats } from '@/db/queries';
 import { getLang } from '@/lib/lang';
 import { dict } from '@/lib/i18n';
 import CommunitySection from '@/components/CommunitySection';
-import DiverseMembers from '@/components/DiverseMembers';
+import DiversityPanel, { type DiversityItem } from '@/components/DiversityPanel';
+import { MEMBER_COLORS, SUBUNITS } from '@/lib/layout';
+import type { MemberDiversity } from '@/db/queries';
 
 export const dynamic = 'force-dynamic';
 
@@ -28,6 +30,10 @@ export default async function CommunityPicks() {
   const lang = await getLang();
   const t = dict[lang];
   const stats = await getCommunityStats(lang);
+
+  // format the anchor line server-side (i18n formatters can't cross to the client)
+  const withAnchor = (items: MemberDiversity[]): DiversityItem[] =>
+    items.map((m) => ({ ...m, topLabel: m.topShare > 0 ? t.topPick(m.topSong, m.topShare) : '—' }));
 
   const updated =
     new Intl.DateTimeFormat('en-CA', {
@@ -114,13 +120,27 @@ export default async function CommunityPicks() {
         ))}
       </div>
 
-      <div className="mt-6">
-        <DiverseMembers
+      <div className="mt-6 space-y-6">
+        <DiversityPanel
           title={t.diverseTitle}
           subhead={t.diverseSub}
-          items={stats.diverseMembers}
-          pickCount={t.picksCount}
-          unit={t.nounSongs}
+          legend={t.diverseLegend}
+          swatch={`linear-gradient(135deg, ${MEMBER_COLORS.join(', ')})`}
+          spreadLabel={t.spreadLabel}
+          items={withAnchor(stats.diverseMembers)}
+          collapse={{
+            defaultCount: 3,
+            expandLabel: t.showAll(stats.diverseMembers.length, t.nounMembers),
+            collapseLabel: t.showLess,
+          }}
+        />
+        <DiversityPanel
+          title={t.diverseUnitTitle}
+          subhead={t.diverseUnitSub}
+          legend={t.diverseUnitLegend}
+          swatch={`linear-gradient(135deg, ${SUBUNITS.map((u) => u.color).join(', ')})`}
+          spreadLabel={t.spreadLabel}
+          items={withAnchor(stats.diverseUnits)}
         />
       </div>
 

@@ -11,7 +11,7 @@ import type { SongsResponse, PicksData, Song, Character } from '@/lib/types';
 const SONGS_KEY = 'songs:v3'; // bumped: image back to the direct CDN url
 const SONGS_TTL = 300; // 5 min — songs change only on reseed
 const PICK_TTL = 86400; // 1 day — picks are immutable once created
-const COMMUNITY_KEY = 'community:v3'; // bumped: added diverseMembers
+const COMMUNITY_KEY = 'community:v6'; // bumped: sub-unit thumb = top song cover
 const COMMUNITY_TTL = 60; // recompute at most once a minute
 const PICKCOUNTS_KEY = 'pickcounts:v1'; // per-song pick totals (locale-agnostic)
 const PICKCOUNTS_TTL = 60;
@@ -114,17 +114,18 @@ export interface SongStat {
   light: boolean; // true when `color` is a light solid hex (needs a contrast safeguard)
 }
 
-// Per-member diversity: how varied the community's picks of THAT member's solo
-// songs are — measured by how many distinct songs of theirs got picked.
+// Diversity (member or sub-unit): how EVENLY the community's picks spread across
+// that entity's songs (normalized entropy). 100 = perfectly even; low = one song
+// dominates. `topSong`/`topShare` are the human anchor for the score.
 export interface MemberDiversity {
   slug: string;
   name: string;
-  image: string;
+  image?: string; // member portrait; omitted for sub-units (a color thumb is used)
   color: string;
-  distinct: number; // # of different songs of theirs picked (the sort key)
-  available: number; // # of songs in their solo catalog (bar denominator)
-  picks: number; // total picks of their songs across all boards
-  light: boolean; // light member color → bar needs a contrast safeguard
+  spread: number; // 0-100 evenness score (the sort key)
+  topSong: string; // their most-picked song (display name)
+  topShare: number; // 0-100 % of their picks that landed on topSong
+  light: boolean; // light identity color → bar needs a contrast safeguard
 }
 
 export interface CommunityStats {
@@ -135,6 +136,7 @@ export interface CommunityStats {
   solo: SongStat[];
   others: SongStat[];
   diverseMembers: MemberDiversity[]; // all 12 members, most-diverse first
+  diverseUnits: MemberDiversity[]; // all 4 sub-units, most-diverse first
 }
 
 type Cat = 'group' | 'units' | 'solo' | 'others';
@@ -191,8 +193,10 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
     solo: {},
     others: {},
   };
-  // per-member solo-song tally: memberTally[memberSlug][songSlug] = count
+  // per-bucket song tallies: tally[bucketSlug][songSlug] = count, for the member
+  // (solo) and sub-unit (units) diversity scores.
   const memberTally: Record<string, Record<string, number>> = {};
+  const unitTally: Record<string, Record<string, number>> = {};
 
   for (const row of rows) {
     for (const [slotId, slug] of Object.entries(row.data as PicksData)) {
@@ -202,30 +206,90 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
       tally[cat][slug] = (tally[cat][slug] ?? 0) + 1;
       if (cat === 'solo') {
         (memberTally[bucket] ??= {})[slug] = (memberTally[bucket][slug] ?? 0) + 1;
+      } else if (cat === 'units') {
+        (unitTally[bucket] ??= {})[slug] = (unitTally[bucket][slug] ?? 0) + 1;
       }
     }
   }
 
-  // diversity for every member that has a solo bucket (drops Yu Takasaki → 12),
-  // most distinct songs first; ties broken by total picks.
+  // "Most diverse" = how evenly picks spread across an entity's OWN songs, via
+  // normalized Shannon entropy over catalog songs only (stray off-catalog picks
+  // ignored). spread% = H / log2(N) · 100. Returns the spread + the dominant
+  // ("top") song as the human anchor.
+  const diversityOf = (bucketSlug: string, tally: Record<string, number>) => {
+    const catalog = byBucket[bucketSlug] ?? [];
+    const n = catalog.length;
+    let total = 0;
+    let topSlug = '';
+    let topCount = 0;
+    const counts = catalog.map((s) => {
+      const cnt = tally[s.slug] ?? 0;
+      total += cnt;
+      if (cnt > topCount) {
+        topCount = cnt;
+        topSlug = s.slug;
+      }
+      return cnt;
+    });
+    let spread = 0;
+    if (total > 0 && n > 1) {
+      let h = 0;
+      for (const cnt of counts) {
+        if (cnt > 0) {
+          const p = cnt / total;
+          h -= p * Math.log2(p);
+        }
+      }
+      spread = Math.round((h / Math.log2(n)) * 100);
+    }
+    const top = bySlug[topSlug];
+    const topSong = top ? (lang === 'ja' ? (top.jpName ?? top.name) : top.name) : '';
+    return {
+      spread,
+      topSong,
+      topImage: top?.image ?? '',
+      topShare: total > 0 ? Math.round((topCount / total) * 100) : 0,
+    };
+  };
+
+  // 12 members (drops Yu Takasaki — no bucket); sorted by spread desc, ties →
+  // lower top-song share first.
   const diverseMembers: MemberDiversity[] = chars
     .filter((c) => (byBucket[c.slug]?.length ?? 0) > 0)
     .map((c) => {
-      const m = memberTally[c.slug] ?? {};
-      const picksOfMember = Object.values(m).reduce((a, b) => a + b, 0);
       const color = charColor[c.slug] ?? '#b8b6ad';
+      const { spread, topSong, topShare } = diversityOf(c.slug, memberTally[c.slug] ?? {});
       return {
         slug: c.slug,
         name: charName[c.slug] ?? c.name,
-        image: c.image,
+        image: c.image, // member portrait
         color,
-        distinct: Object.keys(m).length,
-        available: byBucket[c.slug].length,
-        picks: picksOfMember,
+        spread,
+        topSong,
+        topShare,
         light: color.startsWith('#') && isLightColor(color),
       };
     })
-    .sort((a, b) => b.distinct - a.distinct || b.picks - a.picks);
+    .sort((a, b) => b.spread - a.spread || a.topShare - b.topShare);
+
+  // 4 sub-units; same metric. Thumb = their dominant song's cover (no portrait).
+  const diverseUnits: MemberDiversity[] = SUBUNITS.filter(
+    (u) => (byBucket[u.bucket]?.length ?? 0) > 0,
+  )
+    .map((u) => {
+      const { spread, topSong, topShare, topImage } = diversityOf(u.bucket, unitTally[u.bucket] ?? {});
+      return {
+        slug: u.bucket,
+        name: u.label, // brand name — stays as-is in both locales
+        image: topImage || undefined,
+        color: u.color,
+        spread,
+        topSong,
+        topShare,
+        light: u.color.startsWith('#') && isLightColor(u.color),
+      };
+    })
+    .sort((a, b) => b.spread - a.spread || a.topShare - b.topShare);
 
   const top = (m: Record<string, number>): SongStat[] =>
     Object.entries(m)
@@ -254,6 +318,7 @@ export async function getCommunityStats(lang: Lang = 'en'): Promise<CommunitySta
     solo: top(tally.solo),
     others: top(tally.others),
     diverseMembers,
+    diverseUnits,
   };
   await cacheSet(cacheKey, stats, COMMUNITY_TTL);
   return stats;

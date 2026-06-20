@@ -40,9 +40,16 @@ export interface Dict {
   nounCharSongs: string;
   showAll: (n: number, noun: string) => string;
   showLess: string;
-  // most-diverse-members section
+  // most-diverse sections (members + sub-units)
   diverseTitle: string;
   diverseSub: string;
+  diverseUnitTitle: string;
+  diverseUnitSub: string;
+  diverseUnitLegend: string;
+  nounMembers: string;
+  spreadLabel: string;
+  topPick: (song: string, share: number) => string;
+  diverseLegend: string;
   picksCount: (n: number) => string;
   allTitle: string;
   allAccent: string;
@@ -105,7 +112,16 @@ export const dict: Record<Lang, Dict> = {
     showAll: (n, noun) => `Show all ${n} ${noun}`,
     showLess: 'Show less',
     diverseTitle: 'Most Diverse Members',
-    diverseSub: 'Whose picks spread across the most different songs',
+    diverseSub: 'No runaway favorite — fans spread their pick across many songs',
+    diverseUnitTitle: 'Most Diverse Sub-units',
+    diverseUnitSub: 'Which unit’s picks spread across the most songs',
+    diverseUnitLegend:
+      'Spread = how evenly fans’ picks split across a unit’s songs (100% = perfectly even, lower = one song dominates).',
+    nounMembers: 'members',
+    spreadLabel: 'spread',
+    topPick: (song, share) => `Top pick: ${song} · ${share}%`,
+    diverseLegend:
+      'Spread = how evenly fans’ picks split across a member’s songs (100% = perfectly even, lower = one song dominates).',
     picksCount: (n) => `${n.toLocaleString()} ${n === 1 ? 'pick' : 'picks'}`,
     allTitle: 'All',
     allAccent: 'Songs',
@@ -166,7 +182,16 @@ export const dict: Record<Lang, Dict> = {
     showAll: (n, noun) => `すべての${n}${noun}を表示`,
     showLess: '表示を減らす',
     diverseTitle: '選曲が多彩なメンバー',
-    diverseSub: '最も多くの異なる楽曲が選ばれたメンバー',
+    diverseSub: '人気が一曲に偏らず、ファンの選曲が多くの曲に分かれているメンバー',
+    diverseUnitTitle: '選曲が多彩なユニット',
+    diverseUnitSub: '選曲が最も多くの曲に分かれているユニット',
+    diverseUnitLegend:
+      '均等度 = ファンの選曲が各ユニットの曲にどれだけ均等に分かれているか（100% = 完全に均等、低いほど一曲に集中）。',
+    nounMembers: 'メンバー',
+    spreadLabel: '均等度',
+    topPick: (song, share) => `人気曲: ${song} · ${share}%`,
+    diverseLegend:
+      '均等度 = ファンの選曲が各メンバーの曲にどれだけ均等に分かれているか（100% = 完全に均等、低いほど一曲に集中）。',
     picksCount: (n) => `${n.toLocaleString()}回選曲`,
     allTitle: '楽曲',
     allAccent: '一覧',
