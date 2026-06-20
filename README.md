@@ -37,7 +37,8 @@ mypick-nijigasaki/
   web/            the app (Next.js 16, App Router, Bun, Tailwind 4)
     app/          routes (home, /p/[id], /community-picks, /songs, /api/picks)
     components/   Poster, Export (9:16 boards), Card, SongSlot, *Modal,
-                  CommunitySection, PicksProvider, SiteHeader/Footer, LangToggle
+                  CommunityCards (analytics switcher), PicksProvider,
+                  SiteHeader/Footer, LangToggle
     db/           schema.ts, queries.ts, seed.ts, index.ts (drizzle client)
     lib/          api, types, layout (colors/labels), i18n (en/ja), redis, site
     Dockerfile, .env.example
@@ -56,12 +57,20 @@ mypick-nijigasaki/
   `POST /api/picks`, rendered read-only at `/p/<id>`. **Anonymous** — no author
   name is sent or stored; the name a user types stays local, drawn only on the
   downloaded image.
-- **Community stats** (`/community-picks`) aggregate all picks in
-  `getCommunityStats(lang)` — top songs per category (Nijigasaki / Units / Solo /
-  Others), each row carrying its identity bar color, plus **Most Diverse
-  Members** (all 12 members ranked by how many distinct songs of theirs were
-  picked) — cached in Redis (60s, per-locale key). `createPick` busts both
-  locale keys on write.
+- **Community analytics** (`/community-picks`) — 4 category cards (Nijigasaki /
+  Units / Solo / Others), each with a **squircle switcher** that swaps the card
+  body between views (`CommunityCards.tsx`, client). Views: Top Songs · By Unit ·
+  Unit Leaders · Member Leaders · Most Diverse (spread score) · Pick Race ·
+  Rising & Falling (Race + Movers on every card).
+  - `getCommunityStats(lang)` — cheap aggregates (top songs w/ identity bar
+    colors, by-unit, unit/member leaders, diversity); Redis `community:v6:<lang>`,
+    60s.
+  - `getCommunityTrends(lang)` — heavier: replays boards in `created_at` order to
+    build the **Pick Race** (~60 cumulative keyframes of the top-8 standings, for
+    an animated bar-chart race played 0→now) and **Rising & Falling** (current
+    share vs the state 3,000 boards ago); Redis `trends:v2:<lang>`, 5 min.
+  - `createPick` busts both, per-locale, on write. All view strings are formatted
+    server-side (the client component takes plain data — no functions cross RSC).
 - **All songs** (`/songs`) lists every song grouped by bucket; each cover is
   badged with its community pick count via `getSongPickCounts()` (slug→count,
   cached `pickcounts:v1`, also busted by `createPick`).

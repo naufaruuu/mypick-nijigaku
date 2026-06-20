@@ -1,5 +1,17 @@
 @import 'tailwindcss';
 
+/* switcher-menu pop-in (community analytics cards) */
+@keyframes apPop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 :root {
   /* squircle radius for buttons/inputs — matches the card corners */
   --border-radius-lg: 10px;

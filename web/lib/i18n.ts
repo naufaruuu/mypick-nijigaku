@@ -51,6 +51,49 @@ export interface Dict {
   topPick: (song: string, share: number) => string;
   diverseLegend: string;
   picksCount: (n: number) => string;
+  // community analytics cards (per-category switcher)
+  analytics: {
+    hint: string;
+    menuHeader: string;
+    topSongs: string;
+    pickRace: string;
+    risingFalling: string;
+    byUnit: string;
+    unitLeaders: string;
+    memberLeaders: string;
+    mostDiverse: string;
+    descTopGroup: string;
+    descTopUnits: string;
+    descTopSolo: string;
+    descTopOthers: string;
+    descRace: string;
+    descMovers: string;
+    descByUnit: string;
+    descUnitLeaders: string;
+    descMemberLeaders: string;
+    descDiverse: string;
+    subTopGroup: string;
+    subTopUnits: string;
+    subTopSolo: string;
+    subTopOthers: string;
+    subByUnit: string;
+    subUnitLeaders: string;
+    subMemberLeaders: string;
+    subDiverseUnits: string;
+    subDiverseMembers: string;
+    subRace: string;
+    subMovers: string;
+    rising: string;
+    falling: string;
+    moversWindow: string;
+    raceEmpty: string;
+    moversEmpty: string;
+    boardsWord: string;
+    play: string;
+    pause: string;
+    unitMeta: (songs: number, topPct: number) => string;
+    nowShare: (n: number) => string;
+  };
   allTitle: string;
   allAccent: string;
   communityNote: string;
@@ -123,6 +166,48 @@ export const dict: Record<Lang, Dict> = {
     diverseLegend:
       'Spread = how evenly fans’ picks split across a member’s songs (100% = perfectly even, lower = one song dominates).',
     picksCount: (n) => `${n.toLocaleString()} ${n === 1 ? 'pick' : 'picks'}`,
+    analytics: {
+      hint: 'Tap the squircle on a card to switch its analytics',
+      menuHeader: 'Show in this card',
+      topSongs: 'Top Songs',
+      pickRace: 'Pick Race',
+      risingFalling: 'Rising & Falling',
+      byUnit: 'By Unit',
+      unitLeaders: 'Unit Leaders',
+      memberLeaders: 'Member Leaders',
+      mostDiverse: 'Most Diverse',
+      descTopGroup: 'Most-picked group songs',
+      descTopUnits: 'All unit songs, mixed together',
+      descTopSolo: 'Most-picked solo songs',
+      descTopOthers: 'Most-picked misc songs',
+      descRace: 'Watch the top songs change, pick by pick',
+      descMovers: 'Biggest recent swings',
+      descByUnit: '1 vote per unit — sorted per unit',
+      descUnitLeaders: 'Whose race is most decisive',
+      descMemberLeaders: 'Each member’s biggest song',
+      descDiverse: 'Picks spread evenest across songs',
+      subTopGroup: 'Top group songs',
+      subTopUnits: 'Top sub-unit songs',
+      subTopSolo: 'Top character songs',
+      subTopOthers: 'Shuffle, collab & misc',
+      subByUnit: 'Each unit ranked on its own',
+      subUnitLeaders: 'Winning song of each unit',
+      subMemberLeaders: 'Top song of each member',
+      subDiverseUnits: 'Sub-units by even spread',
+      subDiverseMembers: 'Members by even spread',
+      subRace: 'Play the ranking from the first pick to now',
+      subMovers: 'Movers over the last 3,000 picks',
+      rising: 'Rising',
+      falling: 'Falling',
+      moversWindow: 'last 3,000 picks',
+      raceEmpty: 'Not enough picks yet to play a race.',
+      moversEmpty: 'Not enough picks yet to show movers.',
+      boardsWord: 'picks',
+      play: 'Play',
+      pause: 'Pause',
+      unitMeta: (songs, topPct) => `${songs} ${songs === 1 ? 'song' : 'songs'} · top ${topPct}%`,
+      nowShare: (n) => `now ${n}%`,
+    },
     allTitle: 'All',
     allAccent: 'Songs',
     communityNote:
@@ -193,6 +278,48 @@ export const dict: Record<Lang, Dict> = {
     diverseLegend:
       '均等度 = ファンの選曲が各メンバーの曲にどれだけ均等に分かれているか（100% = 完全に均等、低いほど一曲に集中）。',
     picksCount: (n) => `${n.toLocaleString()}回選曲`,
+    analytics: {
+      hint: 'カードの四角ボタンで表示を切り替え',
+      menuHeader: 'このカードに表示',
+      topSongs: '人気曲',
+      pickRace: '推移レース',
+      risingFalling: '上昇・下降',
+      byUnit: 'ユニット別',
+      unitLeaders: 'ユニット代表曲',
+      memberLeaders: 'メンバー代表曲',
+      mostDiverse: '多彩さ',
+      descTopGroup: 'グループ楽曲の人気順',
+      descTopUnits: 'ユニット楽曲をまとめて',
+      descTopSolo: 'ソロ楽曲の人気順',
+      descTopOthers: 'その他楽曲の人気順',
+      descRace: '票が増えるごとに上位曲が入れ替わる様子',
+      descMovers: '最近の変動が大きい曲',
+      descByUnit: '1ユニット1票・ユニット内順位',
+      descUnitLeaders: '内部競争が最も明確なのは',
+      descMemberLeaders: '各メンバーの一番人気曲',
+      descDiverse: '選曲が最も均等に分かれている',
+      subTopGroup: 'グループ楽曲トップ',
+      subTopUnits: 'サブユニット楽曲トップ',
+      subTopSolo: 'キャラクター楽曲トップ',
+      subTopOthers: 'シャッフル・コラボなど',
+      subByUnit: 'ユニットごとの順位',
+      subUnitLeaders: '各ユニットの代表曲',
+      subMemberLeaders: '各メンバーの代表曲',
+      subDiverseUnits: '均等度が高いユニット',
+      subDiverseMembers: '均等度が高いメンバー',
+      subRace: '最初の票から現在までを再生',
+      subMovers: '直近3,000票の変動',
+      rising: '上昇',
+      falling: '下降',
+      moversWindow: '直近3,000票',
+      raceEmpty: 'レースを再生するには票がまだ足りません。',
+      moversEmpty: '変動を表示するには票がまだ足りません。',
+      boardsWord: '票',
+      play: '再生',
+      pause: '一時停止',
+      unitMeta: (songs, topPct) => `${songs}曲 · トップ${topPct}%`,
+      nowShare: (n) => `現在 ${n}%`,
+    },
     allTitle: '楽曲',
     allAccent: '一覧',
     communityNote:
